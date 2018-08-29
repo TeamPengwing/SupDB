@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- $Id: LotDao.xml,v 1.7 2014/02/05 00:34:00 a0199948 Exp $ -->
+<!-- TODO: remove (demonstration only) -->
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ti.supdb.repository.EmployeeDao">
+
+  <cache/>
+
+  <resultMap id="employeeMap" type="com.ti.supdb.domain.Employee">
+    <id property="empkey" column="EMPKEY"/>
+    <result property="fullname" column="FULLNAME"/>
+    <result property="employeeid" column="EMPLOYEEID"/>
+  </resultMap>
+
+  <select id="getEmployeeList" parameterType="String" resultMap="employeeMap">
+        Select	 
+            SUP_EMPLOYEE.EMPKEY as EMPKEY,
+            SUP_EMPLOYEE.EMPLOYEEID as EMPLOYEEID,
+            SUP_EMPLOYEE.FULLNAME as FULLNAME,
+            SUP_EMPLOYEE.COSTCENTER as COSTCENTER,
+            SUP_EMPLOYEE.STATUS as STATUS 
+        from	 
+            SUP_EMPLOYEE SUP_EMPLOYEE
+  </select>
+ 
+
+</mapper>
