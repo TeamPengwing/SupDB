@@ -8,31 +8,14 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+       
 
-        <link rel="stylesheet" type="text/css" href="webjars/bootstrap/3.3.5/css/bootstrap.min.css"/>
-        <link rel="stylesheet" type="text/css" href="webjars/datatables-bootstrap/2-20120201/DT_bootstrap.css"/>
-        <!-- TI Spring Archetype style overrides -->
-        <link rel="stylesheet" type="text/css" href="css/ffw-spring.css"/>
-        <link rel="stylesheet" type="text/css" href="css/ffw-spring-jqueryui.css"/>
-        <link rel="stylesheet" type="text/css" href="css/ffw-spring-bootstrap.css"/>
 
-        <script src="webjars/jquery/2.1.3/jquery.min.js"></script>
-        <script src="webjars/jquery-ui/1.11.4/jquery-ui.min.js"></script>
-        <script type="text/javascript" src="js/jquery.event.drag-2.0.min.js"></script>
-        <script type="text/javascript" src="js/jquery.cookie.js"></script>
-        <script type="text/javascript" src="js/jquery.springFormModal.js"></script>
-        <script type="text/javascript" src="js/spinner.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-        <script type="text/javascript" src="webjars/datatables/1.10.5/js/jquery.dataTables.min.js"></script>
-        <script type="text/javascript" src="js/dataTables.bootstrap.js"></script>        
-        <script type="text/javascript" src="js/jquery.dataTables.columnFilter-1.5.0.js"></script>
-        <script type="text/javascript" src="js/full_numbers_no_ellipses.js"></script>
-        <script type="text/javascript" src="webjars/datatables-plugins/1.10.11-1/integration/bootstrap/3/dataTables.bootstrap.js"></script>
-
-        <script type="text/javascript" src="js/utilities.js"></script>
-        <script type="text/javascript" src="webjars/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="js/bootstrap-hover-dropdown.js"></script>
-        <script type="text/javascript" src="webjars/jquery-hoverIntent/50f11356f8/jquery.hoverIntent.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
         <!--
             ClickJack busting script
@@ -56,11 +39,10 @@
             $.ajaxSetup({cache: false});
         </script>
 
-        <div class="container-fluid">
+       
             <div id="menu" class="row"><tiles:insertAttribute name="menu" /></div> <!-- End of menu div -->
             <div id="body" class="row"><tiles:insertAttribute name="body" /></div> <!-- End of body div -->
             <div id="footer" class="row"><tiles:insertAttribute name="footer" /></div> <!-- End of footer div -->
-        </div>
 
         <%-- This div is a placeholder for a popup jQuery dialog --%>
         <div id="edit_dialog" title="Add/Update Record"></div> <!-- End of popup dialog div -->
