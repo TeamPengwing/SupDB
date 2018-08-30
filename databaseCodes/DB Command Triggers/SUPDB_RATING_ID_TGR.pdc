@@ -1,0 +1,7 @@
+CREATE OR REPLACE TRIGGER "SUPDB"."SUPDB_RATING_ID_TGR" 
+  before insert on "SUPDB_RATING"
+  for each row
+begin
+    select "SUPDB_RATING_ID_SEQ".nextval into :NEW.RATING_ID from dual;
+end;
+

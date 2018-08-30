@@ -1,0 +1,7 @@
+CREATE OR REPLACE TRIGGER "SUPDB"."SUPDB_RAT_TYPE_ID_TGR" 
+  before insert on "SUPDB_RATING_TYPE"
+  for each row
+begin
+    select "SUPDB_RAT_TYPE_ID_SEQ".nextval into :NEW.RATING_TYPE_ID from dual;
+end;
+

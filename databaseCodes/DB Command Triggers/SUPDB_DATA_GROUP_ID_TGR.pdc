@@ -1,0 +1,6 @@
+CREATE OR REPLACE TRIGGER "SUPDB"."SUPDB_DATA_GROUP_ID_TGR" 
+  before insert on "SUPDB_DATA_GROUPS"
+  for each row
+begin
+    select "SUPDB_DATA_GROUP_ID_SEQ".nextval into :NEW.DATA_GROUP_ID from dual;
+end; 
