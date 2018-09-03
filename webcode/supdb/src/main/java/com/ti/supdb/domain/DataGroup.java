@@ -9,6 +9,17 @@ public class DataGroup {
     private String dataGroup;
     private String createdBy;
     private Date createDate;
+    private int displaySort;
+
+    public DataGroup() {
+
+    }
+
+    public DataGroup(int dataGroupId, String dataGroup, int displaySort) {
+        this.dataGroupId = dataGroupId;
+        this.dataGroup = dataGroup;
+        this.displaySort = displaySort;
+    }
 
     public int getDataGroupId() {
         return dataGroupId;
@@ -48,5 +59,13 @@ public class DataGroup {
 
     public void setCreateDate(Date createDate) {
         this.createDate = createDate;
+    }
+
+    public int getDisplaySort() {
+        return displaySort;
+    }
+
+    public void setDisplaySort(int displaySort) {
+        this.displaySort = displaySort;
     }
 }
