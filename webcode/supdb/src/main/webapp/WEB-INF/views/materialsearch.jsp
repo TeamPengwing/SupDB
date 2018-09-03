@@ -3,19 +3,15 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <div class="container-fluid">
+    <div class="row align-items-center justify-content-center">
+        <div class="col-8">
+
+            <input type="search" class="form-control mx-3 my-3" aria-label="Search" placeholder="Search">
 
 
-    <div class="w-auto p-3" style="background-color: #eee;">
-        <form class="form-inline">
-            <div class="row">
-                <div class="col-sm-12">
-                    <input class="form-control form-control-lg" type="search" placeholder="Search" aria-label="Search">
-                </div>               
-            </div>
-            
-        </form>
+
+        </div>
     </div>
-
 </div>
 <div class="container-fluid">
     <div class="media mt-3">
