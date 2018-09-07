@@ -5,15 +5,15 @@ import com.ti.supdb.domain.SearchResults;
 import java.util.List;
 
 /**
- * Lot service definition. The service layer is where the application's
- * business logic resides (business logic and DAO interaction should normally
- * not appear in the controller).
- * TODO: remove (demonstration only)
+ * Lot service definition. The service layer is where the application's business
+ * logic resides (business logic and DAO interaction should normally not appear
+ * in the controller). TODO: remove (demonstration only)
  */
 public interface SearchService {
 
-        /**
+    /**
      * Returns a search Results.
+     *
      * @param searchTerm The facility identifier.
      * @return The search results
      */

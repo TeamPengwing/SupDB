@@ -47,24 +47,22 @@
 
 <div class="container-fluid">
     <div class="row">
-        <h3 class="col-md-12 view-title">Today's Lots</h3>
+        <h3 class="col-md-12 view-title">Material Search</h3>
     </div>
     <div class="panel panel-default datatable-panel">
         <div class="row">
             <div class="col-md-12">
-                <table class="table tblstandard table-striped" id="maintable">
+                <table class="table tblstandard table-striped" id="maintable" style="width:80%">
                     <thead>
                         <tr class="tbl2">
-                            <th>Material ID</th>
-                            <th>Material Name</th>
-                            <th>Description</th>
+                            <th style="width:20%">Material ID</th>                            
+                            <th>Material</th>
                         </tr>
                     </thead>
                     <tfoot>
                         <tr class="tblbottom">
                             <th>Material ID</th>
-                            <th>Material Name</th>
-                            <th>Description</th>
+                            <th>Material</th>
                         </tr>
                     </tfoot>
                     <tbody></tbody>
@@ -103,6 +101,7 @@
         //var theSearchResult = GetSearchResults();
         var mainTable = $('#maintable').DataTable({
             //data: jQuery.parseJSON(theSearchResult),
+            dom: 'lrtip',
             ajax: {
                 type: "POST",
                 url: "getSearchResults",
@@ -117,56 +116,41 @@
             columns: [
                 {
                     data: "materialid"
+                }
+                ,
+                {
+                    //data: "materialname",
+                    data: null,
+                    render: function (data, type, row) {
+                        //return (data["price"] * data["quantity"])
+                        //return('Test');
 
-                },
-                {
-                    data: "materialname"
-                },
-                {
-                    data: "materialdesc"
+                        return('<img src="https://www.disco.co.jp/eg/products/blade/images/zh05.jpg">' +
+                                '<h3><a href="">' + data["materialname"] + '</a></h3>' +
+                                '<ul>' +
+                                '<li> Description: ' + data["materialdesc"] + '</li>' +
+                                '<li> Supplier: DISCO </li>' +
+                                '<li> Package Application: For Automotive / Non-Automotive / C021 / C027 (LASER groove and non-LASER groove) - Flipchip only </li>' +
+                                '<li> Rating: 3.9 stars (this should be stars!)</li>' +
+                                '</ul>'
+                                );
+                    }
                 }
             ]
 
         });
-
         $('#inputSearch').keyup(function () {
-            mainTable.search($(this).val()).draw();
-        });
-
-
-        //
-
-        $('#inputSearchX').keypress(function (e) {
-            if (e.which === 13) {
-                alert('submitted');
-                //$('form#searchForm').submit();
-                //$("#mainTable").clear().draw();
-                console.log("getting results");
-                theSearchResult = GetSearchResults();
-                console.log("Got the results, reloading table");
-                $('#maintable').DataTable().ajax.reload();
-                //return false;    //<---- Add this line          
+            if ($(this).val().length > 2) {
+                //mainTable.search($(this).val()).columns.adjust().draw();
+                mainTable.search($(this).val()).draw();
             }
         });
+        //
+
     });
     //
 
-    function GetSearchResults() {
-        $.ajax({
-            async: false,
-            cache: false,
-            type: "POST",
-            url: "getSearchResults",
-            data: {
-                searchTerm: $("#inputSearch").val()
-            },
-            success: function (data) {
-                console.log(data.searchResults);
-                return data.searchResults;
-            }
-        });
 
-    }
 </script>
 
 

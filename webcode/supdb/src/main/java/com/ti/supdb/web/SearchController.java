@@ -54,6 +54,7 @@ public class SearchController {
 
         List<SearchResults> ar = searchService.getSearchResults(searchText);
         ret.put("data", ar);
+        //ret.put("total", ar.size());
         //ret.put("data", searchService.getSearchResults(searchText));
 
         //} catch (Exception e) {
