@@ -13,6 +13,7 @@ import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -34,22 +35,27 @@ public class SearchController {
         this.searchService = searchService;
     }
 
-    @RequestMapping(value = "/getSearchResults", method = RequestMethod.GET)
+    @RequestMapping("/searchmaterial")
+    public String hello(final Model model) {
+        return "materialsearch";
+    }
+
+    @RequestMapping(value = "/getSearchResults", method = RequestMethod.POST)
     @ResponseBody
-    public Map<String, Object> getSearchResults(
-            @RequestParam("searchTerm") String searchTerm
-    ) {
+    public Map<String, Object> getSearchResults(HttpServletRequest request) {
         Map<String, Object> ret = new HashMap<String, Object>();
+        String searchText = "";
+        try {
+            searchText = request.getParameter("search[value]").toString();
+        } catch (Exception e) {
+
+        }
         //try {
 
-        System.out.println("sEARCH tERM: " + searchTerm);
-
-        List<SearchResults> ar = searchService.getSearchResults(searchTerm);
-        ret.put("searchResults", ar);
-
-        for (int i = 0; i < ar.size(); i++) {
-            System.out.println(ar.get(i).toString());
-        }
+        List<SearchResults> ar = searchService.getSearchResults(searchText);
+        ret.put("data", ar);
+        //ret.put("total", ar.size());
+        //ret.put("data", searchService.getSearchResults(searchText));
 
         //} catch (Exception e) {
         //TO DO: Logger code here
