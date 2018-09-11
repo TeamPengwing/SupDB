@@ -12,7 +12,7 @@ public class DataField {
     private Date createDate;
     private String lastModifiedBy;
     private Date lastModifiedDate;
-
+    
     public int getDataFieldId() {
         return dataFieldId;
     }
