@@ -26,11 +26,12 @@
         <filter-name>TISecurityFilterChain</filter-name>
         <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
     </filter>
-    <!-- Identifies requests that must pass through the security chain -->
+    <!-- Identifies requests that must pass through the security chain 
     <filter-mapping>
         <filter-name>TISecurityFilterChain</filter-name>
         <url-pattern>/*</url-pattern>
     </filter-mapping>
+    -->
 
     <!-- Define a filter for URL rewriting (simplifies resource handling) -->
     <filter>
