@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- $Id: LotDao.xml,v 1.7 2014/02/05 00:34:00 a0199948 Exp $ -->
+<!-- TODO: remove (demonstration only) -->
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ti.supdb.repository.DataGroupDao">
+
+    <cache/>
+
+    <resultMap id="dataGroupMap" type="com.ti.supdb.domain.DataGroup">
+
+    </resultMap>
+
+    <select id="getDataGroups" parameterType="String" resultType="java.util.Map">
+        
+        select data_group, data_group_id, material_type_id from
+        supdb_data_groups where material_type_id = 
+        (select material_type_id from supdb_material_type where material_type = #{commodity})
+    </select>
+ 
+
+</mapper>

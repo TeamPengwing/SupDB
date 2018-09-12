@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- $Id: LotDao.xml,v 1.7 2014/02/05 00:34:00 a0199948 Exp $ -->
+<!-- TODO: remove (demonstration only) -->
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ti.supdb.repository.SearchResultsDao">
+
+  <resultMap id="searchResultsMap" type="com.ti.supdb.domain.SearchResults">
+    <id property="materialid" column="Material_ID"/>
+    <result property="materialname" column="Material_Name"/>
+    <result property="materialdesc" column="Material_Description"/>
+  </resultMap>
+
+
+  <select id="getSearchResultsList" statementType="CALLABLE" parameterType="java.util.Map">
+        call SUPDB_SEARCH.FULL_TEXT_SEARCH (
+        #{sSearchString, jdbcType = VARCHAR, mode = IN}, 
+        #{oResult, jdbcType=CURSOR, javaType=java.sql.ResultSet, mode=OUT, resultMap=searchResultsMap}
+        )
+  </select>
+ 
+</mapper>
