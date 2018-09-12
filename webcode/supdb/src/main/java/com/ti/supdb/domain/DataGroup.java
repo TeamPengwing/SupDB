@@ -10,15 +10,17 @@ public class DataGroup {
     private String createdBy;
     private Date createDate;
     private int displaySort;
+    private boolean visible;
 
     public DataGroup() {
 
     }
 
-    public DataGroup(int dataGroupId, String dataGroup, int displaySort) {
+    public DataGroup(int dataGroupId, String dataGroup, int displaySort, boolean visible) {
         this.dataGroupId = dataGroupId;
         this.dataGroup = dataGroup;
         this.displaySort = displaySort;
+        this.visible = visible;
     }
 
     public int getDataGroupId() {
@@ -67,5 +69,13 @@ public class DataGroup {
 
     public void setDisplaySort(int displaySort) {
         this.displaySort = displaySort;
+    }
+
+    public boolean isVisible() {
+        return visible;
+    }
+
+    public void setVisible(boolean visible) {
+       this.visible = visible;
     }
 }
