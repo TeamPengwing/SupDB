@@ -112,7 +112,7 @@
                 }
             },
             searching: true,
-            serverSide: true,
+            //serverSide: true,
             columns: [
                 {
                     data: "materialid"
@@ -139,10 +139,10 @@
 
         });
         $('#inputSearch').keyup(function () {
-            if ($(this).val().length > 2) {
+            //if ($(this).val().length > 2) {
                 //mainTable.search($(this).val()).columns.adjust().draw();
                 mainTable.search($(this).val()).draw();
-            }
+            //}
         });
         //
 
