@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- $Id: LotDao.xml,v 1.7 2014/02/05 00:34:00 a0199948 Exp $ -->
+<!-- TODO: remove (demonstration only) -->
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ti.supdb.repository.ComparatorDao">
+
+    <resultMap id="comparatorDataGroupMap" type="com.ti.supdb.domain.DataGroup">
+        <result property="dataGroupId" column="data_group_id"/>
+        <result property="dataGroup" column="data_group"/>
+        <result property="displaySort" column="display_sort"/>
+        <result property="visible" column="visible"/>
+    </resultMap>
+  
+    <resultMap id="comparatorDataFieldMap" type="com.ti.supdb.domain.DataField">
+        <result property="dataFieldId" column="data_field_id"/>
+        <result property="dataGroupId" column="data_group_id"/>
+        <result property="dataField" column="data_field"/>
+    </resultMap>
+    
+    <resultMap id="comparatorMaterialMap" type="com.ti.supdb.domain.Material">
+        <result property="materialId" column="material_id"/>
+        <result property="materialName" column="material_name"/>
+        <result property="materialDescription" column="material_description"/>
+        <result property="materialType" column="material_type"/>
+    </resultMap>
+
+    <select id="getAllDataGroupsWithSort" statementType="CALLABLE" parameterType="java.util.Map">
+        call p_supdb_comparator.get_data_groups_sort (
+        #{result, jdbcType=CURSOR, javaType=java.sql.ResultSet, mode=OUT, resultMap=comparatorDataGroupMap}
+        )
+    </select>
+    
+    <select id="getDataFieldsByDataGroupId" statementType="CALLABLE" parameterType="java.util.Map">
+        call p_supdb_comparator.get_fields_by_group_id (
+        #{dataGroupId, jdbcType=NUMERIC, javaType=INTEGER, mode=IN},
+        #{result, jdbcType=CURSOR, javaType=java.sql.ResultSet, mode=OUT, resultMap=comparatorDataFieldMap}
+        )
+    </select>
+    
+    <select id="compGetMaterial" statementType="CALLABLE" parameterType="java.util.Map">
+        call p_supdb_comparator.material_search (
+        #{keyWord, mode=IN, jdbcType=VARCHAR},
+        #{result, jdbcType=CURSOR, javaType=java.sql.ResultSet, mode=OUT, resultMap=comparatorMaterialMap}
+        )
+    </select>
+ 
+</mapper>

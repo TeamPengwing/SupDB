@@ -1,6 +1,7 @@
 package com.ti.supdb.domain;
 
 import java.util.Date;
+import java.util.List;
 
 public class DataGroup {
 
@@ -10,15 +11,18 @@ public class DataGroup {
     private String createdBy;
     private Date createDate;
     private int displaySort;
-
+    private boolean visible;
+    private List<DataField> datafields; 
+    
     public DataGroup() {
 
     }
 
-    public DataGroup(int dataGroupId, String dataGroup, int displaySort) {
+    public DataGroup(int dataGroupId, String dataGroup, int displaySort, boolean visible) {
         this.dataGroupId = dataGroupId;
         this.dataGroup = dataGroup;
         this.displaySort = displaySort;
+        this.visible = visible;
     }
 
     public int getDataGroupId() {
@@ -67,5 +71,27 @@ public class DataGroup {
 
     public void setDisplaySort(int displaySort) {
         this.displaySort = displaySort;
+    }
+
+    public boolean isVisible() {
+        return visible;
+    }
+
+    public void setVisible(boolean visible) {
+       this.visible = visible;
+    }
+
+    /**
+     * @return the datafields
+     */
+    public List<DataField> getDatafields() {
+        return datafields;
+    }
+
+    /**
+     * @param datafields the datafields to set
+     */
+    public void setDatafields(List<DataField> datafields) {
+        this.datafields = datafields;
     }
 }
