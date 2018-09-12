@@ -7,18 +7,63 @@
 
 <mapper namespace="com.ti.supdb.repository.SearchResultsDao">
 
-  <resultMap id="searchResultsMap" type="com.ti.supdb.domain.SearchResults">
-    <id property="materialid" column="Material_ID"/>
-    <result property="materialname" column="Material_Name"/>
-    <result property="materialdesc" column="Material_Description"/>
-  </resultMap>
+    <resultMap id="searchResultsMap" type="com.ti.supdb.domain.SearchResults">
+        <id property="materialid" column="Material_ID"/>
+        <result property="materialname" column="Material_Name"/>
+        <result property="materialdesc" column="Material_Description"/>
+        <result property="groupname1" column="DGName1"/>
+        <result property="fieldname1" column="DGField1"/>
+        <result property="fieldvalue1" column="DGValue1"/>
+        <result property="groupname2" column="DGName2"/>
+        <result property="fieldname2" column="DGField2"/>
+        <result property="fieldvalue2" column="DGValue2"/>
+        <result property="rating" column="Ave_Rate"/>
+    </resultMap>
 
+    <resultMap id="searchResultsMap2" type="com.ti.supdb.domain.SearchResults2">
+        <id property="materialid" column="Material_ID"/>
+        <result property="materialname" column="Material_Name"/>
+        <result property="materialdesc" column="Material_Description"/>        
+        
+        <collection property="datagroups" column="datagroups"  javaType="List" ofType="com.ti.supdb.domain.DataGroup">                        
+            <result property="dataGroup" column="Data_Group" />            
+        </collection>
+    </resultMap>
+    
+    <resultMap id="searchResultsMap3" type="com.ti.supdb.domain.SearchResults2">
+        <id property="materialid" column="Material_ID"/>
+        <result property="materialname" column="Material_Name"/>
+        <result property="materialdesc" column="Material_Description"/>
+        <result property="testfield" column="TestField"/>
+        <collection property="datagroups" column="datagroups" javaType="List"  ofType="com.ti.supdb.domain.DataGroup">                        
+            <result property="dataGroup" column="Data_Group" />
+            <collection property="datafields" javaType="List"  ofType="com.ti.supdb.domain.DataField">                        
+                <result property="dataField" column="data_field" />
+                <result property="dataValue" column="value" />
+            </collection>
+        </collection>
+    </resultMap>
 
-  <select id="getSearchResultsList" statementType="CALLABLE" parameterType="java.util.Map">
+    <select id="getSearchResultsList" statementType="CALLABLE" parameterType="java.util.Map">
         call SUPDB_SEARCH.FULL_TEXT_SEARCH (
         #{sSearchString, jdbcType = VARCHAR, mode = IN}, 
         #{oResult, jdbcType=CURSOR, javaType=java.sql.ResultSet, mode=OUT, resultMap=searchResultsMap}
         )
-  </select>
+    </select>
+  
+    <select id="getSearchResultsList2" statementType="CALLABLE" parameterType="java.util.Map"
+         resultMap="searchResultsMap2">
+        call SUPDB_SEARCH.FULL_TEXT_SEARCH2 (
+        #{sSearchString, jdbcType = VARCHAR, mode = IN}, 
+        #{oResult, jdbcType=CURSOR, javaType=java.sql.ResultSet, mode=OUT, resultMap=searchResultsMap2}
+        )
+    </select>
+    
+    <select id="getSearchResultsList3" statementType="CALLABLE" parameterType="java.util.Map">
+        call SUPDB_SEARCH.FULL_TEXT_SEARCH3 (
+        #{sSearchString, jdbcType = VARCHAR, mode = IN}, 
+        #{oResult, jdbcType=CURSOR, javaType=java.sql.ResultSet, mode=OUT, resultMap=searchResultsMap3}
+        )
+    </select>
  
 </mapper>
