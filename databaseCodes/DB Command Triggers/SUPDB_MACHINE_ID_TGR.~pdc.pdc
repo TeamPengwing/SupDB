@@ -1,0 +1,6 @@
+CREATE OR REPLACE TRIGGER "SUPDB"."SUPDB_MACHINE_ID_TGR" 
+  before insert on "SUPDB_MACHINES"
+  for each row
+begin
+    select "SUPDB_MACHINE_ID_SEQ".nextval into :NEW.MACHINE_ID from dual;
+end;
