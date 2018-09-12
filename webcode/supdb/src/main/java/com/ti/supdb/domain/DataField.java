@@ -4,15 +4,30 @@ import java.util.Date;
 
 public class DataField {
 
+    /**
+     * @return the dataValue
+     */
+    public String getDataValue() {
+        return dataValue;
+    }
+
+    /**
+     * @param dataValue the dataValue to set
+     */
+    public void setDataValue(String dataValue) {
+        this.dataValue = dataValue;
+    }
+
     private int dataFieldId;
     private int dataGroupId;
     private String dataField;
+    private String dataValue;
     private String dataFieldType;
     private String createdBy;
     private Date createDate;
     private String lastModifiedBy;
     private Date lastModifiedDate;
-
+    
     public int getDataFieldId() {
         return dataFieldId;
     }
