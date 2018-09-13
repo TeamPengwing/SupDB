@@ -240,7 +240,7 @@
                                 </div>
 
 
-                                <div class="table-responsive" style="margin-bottom 10px">
+                                <div class="table-responsive" style="margin-bottom:10px">
                                     <table class="table">
                                         <tbody>
                                             <tr>
