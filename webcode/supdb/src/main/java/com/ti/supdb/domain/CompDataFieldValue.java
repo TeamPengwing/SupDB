@@ -2,6 +2,7 @@ package com.ti.supdb.domain;
 
 public class CompDataFieldValue {
 
+    //comment
     private int dataGroupId;
     private String dataGroup;
     private int dataFieldId;
