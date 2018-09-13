@@ -164,24 +164,24 @@ public class ComparatorServiceImpl implements ComparatorService {
             CompDataFieldValue g1df2 = new CompDataFieldValue();
             g1df2.setDataFieldId(2);
             g1df2.setDataField("Supplier");
-            g1df2.setDataFieldValueMat1(matId1 == 0 ? "" : "Data field value");
+            g1df2.setDataFieldValueMat1(matId1 == 0 ? "" : "Disco");
 
             if (matId2 != 0) {
                 g1df2.setDataFieldValueMat2("different");
             }
 
-            g1df2.setDataFieldValueMat3(matId3 == 0 ? "" : "Data field value");
-            g1df2.setDataFieldValueMat4(matId4 == 0 ? "" : "Data field value");
+            g1df2.setDataFieldValueMat3(matId3 == 0 ? "" : "Disco");
+            g1df2.setDataFieldValueMat4(matId4 == 0 ? "" : "Disco");
             g1df2.setDataGroupId(1);
             list.add(g1df2);
 
             CompDataFieldValue g1df3 = new CompDataFieldValue();
             g1df3.setDataFieldId(3);
             g1df3.setDataField("Part number 1");
-            g1df3.setDataFieldValueMat1(matId1 == 0 ? "" : "Data field value");
-            g1df3.setDataFieldValueMat2(matId2 == 0 ? "" : "Data field value");
-            g1df3.setDataFieldValueMat3(matId3 == 0 ? "" : "Data field value");
-            g1df3.setDataFieldValueMat4(matId4 == 0 ? "" : "Data field value");
+            g1df3.setDataFieldValueMat1(matId1 == 0 ? "" : "4671323-0001");
+            g1df3.setDataFieldValueMat2(matId2 == 0 ? "" : "4671323-0001");
+            g1df3.setDataFieldValueMat3(matId3 == 0 ? "" : "4671323-0001");
+            g1df3.setDataFieldValueMat4(matId4 == 0 ? "" : "4671323-0001");
             g1df3.setDataGroupId(1);
             list.add(g1df3);
         }
@@ -200,12 +200,12 @@ public class ComparatorServiceImpl implements ComparatorService {
             CompDataFieldValue g2df2 = new CompDataFieldValue();
             g2df2.setDataFieldId(2);
             g2df2.setDataField("Cut Type");
-            g2df2.setDataFieldValueMat1(matId1 == 0 ? "" : "Data field value");
+            g2df2.setDataFieldValueMat1(matId1 == 0 ? "" : "For Step cut Z1 blade");
             if (matId2 != 0) {
                 g2df2.setDataFieldValueMat2("different");
             }
-            g2df2.setDataFieldValueMat3(matId3 == 0 ? "" : "Data field value");
-            g2df2.setDataFieldValueMat4(matId4 == 0 ? "" : "Data field value");
+            g2df2.setDataFieldValueMat3(matId3 == 0 ? "" : "For Step cut Z1 blade");
+            g2df2.setDataFieldValueMat4(matId4 == 0 ? "" : "For Step cut Z1 blade");
             g2df2.setDataGroupId(2);
             list.add(g2df2);
 
@@ -215,22 +215,22 @@ public class ComparatorServiceImpl implements ComparatorService {
             CompDataFieldValue g3df1 = new CompDataFieldValue();
             g3df1.setDataFieldId(1);
             g3df1.setDataField("Diameter");
-            g3df1.setDataFieldValueMat1(matId1 == 0 ? "" : "Data field value");
+            g3df1.setDataFieldValueMat1(matId1 == 0 ? "" : "55.56mm");
             if (matId2 != 0) {
                 g3df1.setDataFieldValueMat2("different");
             }
-            g3df1.setDataFieldValueMat3(matId3 == 0 ? "" : "Data field value");
-            g3df1.setDataFieldValueMat4(matId4 == 0 ? "" : "Data field value");
+            g3df1.setDataFieldValueMat3(matId3 == 0 ? "" : "55.56mm");
+            g3df1.setDataFieldValueMat4(matId4 == 0 ? "" : "55.56mm");
             g3df1.setDataGroupId(3);
             list.add(g3df1);
 
             CompDataFieldValue g3df2 = new CompDataFieldValue();
             g3df2.setDataFieldId(2);
             g3df2.setDataField("Grit size Z1");
-            g3df2.setDataFieldValueMat1(matId1 == 0 ? "" : "Data field value");
-            g3df2.setDataFieldValueMat2(matId2 == 0 ? "" : "Data field value");
-            g3df2.setDataFieldValueMat3(matId3 == 0 ? "" : "Data field value");
-            g3df2.setDataFieldValueMat4(matId4 == 0 ? "" : "Data field value");
+            g3df2.setDataFieldValueMat1(matId1 == 0 ? "" : "2000");
+            g3df2.setDataFieldValueMat2(matId2 == 0 ? "" : "2000");
+            g3df2.setDataFieldValueMat3(matId3 == 0 ? "" : "2000");
+            g3df2.setDataFieldValueMat4(matId4 == 0 ? "" : "2000");
             g3df2.setDataGroupId(3);
             list.add(g3df2);
 
@@ -240,20 +240,20 @@ public class ComparatorServiceImpl implements ComparatorService {
             CompDataFieldValue g4df1 = new CompDataFieldValue();
             g4df1.setDataFieldId(1);
             g4df1.setDataField("RPM Z1");
-            g4df1.setDataFieldValueMat1(matId1 == 0 ? "" : "Data field value");
-            g4df1.setDataFieldValueMat2(matId2 == 0 ? "" : "Data field value");
-            g4df1.setDataFieldValueMat3(matId3 == 0 ? "" : "Data field value");
-            g4df1.setDataFieldValueMat4(matId4 == 0 ? "" : "Data field value");
+            g4df1.setDataFieldValueMat1(matId1 == 0 ? "" : "55K");
+            g4df1.setDataFieldValueMat2(matId2 == 0 ? "" : "55K");
+            g4df1.setDataFieldValueMat3(matId3 == 0 ? "" : "55K");
+            g4df1.setDataFieldValueMat4(matId4 == 0 ? "" : "55K");
             g4df1.setDataGroupId(4);
             list.add(g4df1);
 
             CompDataFieldValue g4df2 = new CompDataFieldValue();
             g4df2.setDataFieldId(2);
             g4df2.setDataField("RPM Z2");
-            g4df2.setDataFieldValueMat1(matId1 == 0 ? "" : "Data field value");
-            g4df2.setDataFieldValueMat2(matId2 == 0 ? "" : "Data field value");
-            g4df2.setDataFieldValueMat3(matId3 == 0 ? "" : "Data field value");
-            g4df2.setDataFieldValueMat4(matId4 == 0 ? "" : "Data field value");
+            g4df2.setDataFieldValueMat1(matId1 == 0 ? "" : "30K");
+            g4df2.setDataFieldValueMat2(matId2 == 0 ? "" : "30K");
+            g4df2.setDataFieldValueMat3(matId3 == 0 ? "" : "30K");
+            g4df2.setDataFieldValueMat4(matId4 == 0 ? "" : "30K");
             g4df2.setDataGroupId(4);
             list.add(g4df2);
 

@@ -289,7 +289,7 @@
         if ($('#hiddenId').val() == "1")
         {
             $('#partNum1').text("Material 1").attr('data-value', "1");
-            $('#partNum1-image').append('<img style="height: 100px;" src="https://s3-alliance.com/wp-content/uploads/2017/05/NDS-dicing-blade.jpg">');
+            $('#partNum1-image').append('<img style="height: 100px;" src="https://www.disco.co.jp/eg/products/blade/images/zh05.jpg">');
 
             // reload table rows
             var dataGroups = [];
@@ -426,21 +426,21 @@
             {
                 case "1":
                     $('#partNum1').text(selectedItemLabel).attr('data-value', selectedItemValue);
-                    $('#partNum1-image').append('<img style="height: 100px;" src="https://s3-alliance.com/wp-content/uploads/2017/05/NDS-dicing-blade.jpg">');
+                    $('#partNum1-image').append('<img style="height: 100px;" src="https://www.disco.co.jp/eg/products/blade/images/zh05.jpg">');
                     break;
                 case "2":
                     $('#partNum2').text(selectedItemLabel).attr('data-value', selectedItemValue);
-                    $('#partNum2-image').append('<img style="height: 100px;" src="https://s3-alliance.com/wp-content/uploads/2017/05/NDS-dicing-blade.jpg">');
+                    $('#partNum2-image').append('<img style="height: 100px;" src="https://www.disco.co.jp/eg/products/blade/images/zh05.jpg">');
 
                     break;
                 case "3":
                     $('#partNum3').text(selectedItemLabel).attr('data-value', selectedItemValue);
-                    $('#partNum3-image').append('<img style="height: 100px;" src="https://s3-alliance.com/wp-content/uploads/2017/05/NDS-dicing-blade.jpg">');
+                    $('#partNum3-image').append('<img style="height: 100px;" src="https://www.disco.co.jp/eg/products/blade/images/zh05.jpg">');
 
                     break;
                 case "4":
                     $('#partNum4').text(selectedItemLabel).attr('data-value', selectedItemValue);
-                    $('#partNum4-image').append('<img style="height: 100px;" src="https://s3-alliance.com/wp-content/uploads/2017/05/NDS-dicing-blade.jpg">');
+                    $('#partNum4-image').append('<img style="height: 100px;" src="https://www.disco.co.jp/eg/products/blade/images/zh05.jpg">');
 
                     break;
             }
