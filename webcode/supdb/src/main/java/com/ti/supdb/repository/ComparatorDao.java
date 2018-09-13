@@ -9,6 +9,8 @@ import com.ti.spring.annotations.MyBatisRepository;
 import com.ti.supdb.domain.DataField;
 import com.ti.supdb.domain.DataGroup;
 import com.ti.supdb.domain.Material;
+import com.ti.supdb.domain.CompDataFieldValue;
+import com.ti.supdb.domain.MaterialRating;
 import java.util.List;
 import java.util.Map;
 
@@ -24,5 +26,9 @@ public interface ComparatorDao {
     List<DataField> getDataFieldsByDataGroupId(Map<String, Object> params);
 
     List<Material> compGetMaterial(Map<String, Object> params);
+
+    List<CompDataFieldValue> compGetFieldsWithValues(Map<String, Object> params);
+
+    List<MaterialRating> compGetMaterialRating(Map<String, Object> params);
 
 }

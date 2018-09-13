@@ -19,9 +19,7 @@
         <result property="fieldvalue2" column="DGValue2"/>
         <result property="rating" column="Ave_Rate"/>
     </resultMap>
-
- 
-    
+   
 
     <select id="getSearchResultsList" statementType="CALLABLE" parameterType="java.util.Map">
         call SUPDB_SEARCH.FULL_TEXT_SEARCH (
@@ -29,7 +27,6 @@
         #{oResult, jdbcType=CURSOR, javaType=java.sql.ResultSet, mode=OUT, resultMap=searchResultsMap}
         )
     </select>
-  
-  
+     
  
 </mapper>

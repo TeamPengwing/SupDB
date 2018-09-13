@@ -26,20 +26,22 @@ public class SearchResults implements Serializable {
             String groupname3,
             String fieldname3,
             String fieldvalue3,
-            String rating) {
+            String rating,
+            String imageSrc) {
         this.materialid = materialid;
         this.materialname = materialname;
-        this.materialdesc
-                = this.groupname1 = groupname1;
+        this.materialdesc = materialdesc;
+        this.groupname1 = groupname1;
         this.fieldname1 = fieldname1;
         this.fieldvalue1 = fieldvalue1;
         this.groupname2 = groupname2;
         this.fieldname2 = fieldname2;
         this.fieldvalue2 = fieldvalue2;
-        this.groupname2 = groupname3;
-        this.fieldname2 = fieldname3;
-        this.fieldvalue2 = fieldvalue3;
+        this.groupname3 = groupname3;
+        this.fieldname3 = fieldname3;
+        this.fieldvalue3 = fieldvalue3;
         this.rating = rating;
+        this.imageSrc = imageSrc;
     }
 
     private static final long serialVersionUID = 1L;
@@ -57,6 +59,7 @@ public class SearchResults implements Serializable {
     private String fieldname3;
     private String fieldvalue3;
     private String rating;
+    private String imageSrc;
 
     /**
      * @return the materialid
@@ -238,6 +241,20 @@ public class SearchResults implements Serializable {
      */
     public void setFieldvalue3(String fieldvalue3) {
         this.fieldvalue3 = fieldvalue3;
+    }
+
+    /**
+     * @return the imageSrc
+     */
+    public String getImageSrc() {
+        return imageSrc;
+    }
+
+    /**
+     * @param imageSrc the imageSrc to set
+     */
+    public void setImageSrc(String imageSrc) {
+        this.imageSrc = imageSrc;
     }
 
 }

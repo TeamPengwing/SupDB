@@ -20,14 +20,19 @@
         border-bottom: 0px;
     }
 
+    .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{
+        border-top-color: #003f81;
+        border-top-width: 10px;
+    }
+
 
 
 </style>
 
 <div class="container-fluid" style="padding-left: 50px; padding-right: 50px;">
-    <div class="row">
+    <div class="row" style="margin-top: 25px">
         <div class="col-sm-12 text-center">
-            <h1>Material Name</h1>
+            <h1>Electroformed Bond Hub Blades - ZH14SERIES</h1>
         </div>
     </div>
 
@@ -42,17 +47,25 @@
             <a href="#">Ask a question</a>
         </div>
     </div>
-    <div class="row">
-        <div class="col col-sm">
+    <div class="row" style="margin-bottom: 25px; margin-top: 25px;">
+        <div class="col col-sm-10">
             <h3>Material Description</h3>
-            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et accumsan augue. Nunc ac lobortis elit, ut porta orci. Sed sed venenatis ex. Vivamus enim lacus, placerat non risus vitae, pretium maximus tortor. Aliquam convallis efficitur blandit. Ut euismod enim et volutpat viverra. In mollis sed erat et ultrices. Nulla dolor velit, imperdiet at tincidunt eu, tincidunt ut quam. Quisque vitae tincidunt dui. Praesent in tortor a felis fringilla ullamcorper. Donec scelerisque mauris leo, sit amet tincidunt nibh ultricies ac. Phasellus eu euismod purus. Donec finibus dolor orci.</span>
-            <h5>Current Price: $1,234.00</h5>
-            <button class="btn btn-primary">Order</button>
+            <div style="margin-bottom: 10px"> The ZH14 series provides improved blade rigidity to realize stable processing without
+                slanted cutting even under high load conditions, which includes processing
+                applications requiring high speed, deep cutting, and long blade exposure.
+                In addition, for narrow street and high revolution speed processing, improvements in
+                the blade breakage speed limit* and wavy cutting can be expected.
+            </div>
+            <h5>Current Price: $256.00 per unit</h5>
+            <div class="btn-group">
+                <button class="btn btn-primary"><i class="fas fa-boxes"></i> Request for stock</button>
+                <button class="btn btn-danger"><i class="fas fa-question-circle"></i> Inquire</button>
+                <button class="btn btn-info" ><i class="fas fa-question-circle"></i> Compare</button>
+            </div>
         </div>
         <div class="col col-sm">
-
+            <img src="https://static1.squarespace.com/static/56f381802fe131f339f04251/t/56f3c5bbe707ebc970a0d205/1458816447522/" alt="Disc" class="rounded float-right" style="height: 100%">
         </div>
-
     </div>
     <div class="row">
         <div class="col col-sm-12">
@@ -69,7 +82,7 @@
             <div class="tab-content" id="nav-tabContent">
                 <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
                     <div class="row" style="margin-top: 20px">
-                        <div class="col col-sm-8">
+                        <div class="col col-sm">
                             <h4>Technical Specs and Parameters</h4>
                             <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                 Technical Spec
@@ -85,13 +98,50 @@
                                     <div class="card-header" id="headingOne">
                                         <h5 class="mb-0">
                                             <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                                Technical Specification
+                                                <i class="fas fa-drafting-compass"></i> Technical Specification
                                             </button>
                                         </h5>
                                     </div>
                                     <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
                                         <div class="card-body">
-                                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                            <span>
+                                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                            </span>
+                                            <div class="table-responsive" style="margin-top: 15px">
+                                                <table class="table">
+                                                    <tbody>
+                                                        <tr>
+                                                            <th>Tip</th>
+                                                            <td>192.5</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Chamfer Diameter</th>
+                                                            <td>48.25</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Chamfer Angle</th>
+                                                            <td>30</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Inner Chamfer Angle
+                                                                for dual chamfer angle only</th>
+                                                            <td>30</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Hole</th>
+                                                            <td>28</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Face Angle</th>
+                                                            <td>11</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Outer Radius</th>
+                                                            <td>-</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -99,13 +149,49 @@
                                     <div class="card-header" id="headingTwo">
                                         <h5 class="mb-0">
                                             <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                                Process Specification
+                                                <i class="fas fa-chalkboard-teacher"></i> Process Specification
                                             </button>
                                         </h5>
                                     </div>
                                     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
                                         <div class="card-body">
-                                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                            <span>
+                                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                            </span> 
+                                            <div class="table-responsive" style="margin-top: 15px">
+                                                <table class="table">
+                                                    <tbody>
+                                                        <tr>
+                                                            <th>Smallest Ball Size</th>
+                                                            <td>-</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Smallest Ball Size</th>
+                                                            <td>Connx Plus LA</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Package/Application/Device</th>
+                                                            <td>W/VQFN</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>STD L/F MAX (KTD)</th>
+                                                            <td>1750</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>STD L/F ACTUAL (KTD)</th>
+                                                            <td>1500</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>ROUGHENED  L/F MAX (KTD)</th>
+                                                            <td>1250</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Dual Source (Yes/No?) If Yes, indicate the Dual Source Item</th>
+                                                            <td>PECO B0810-30-14-03 (TI P/N 4698512-0001)</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -113,33 +199,84 @@
                                     <div class="card-header" id="headingThree">
                                         <h5 class="mb-0">
                                             <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                                Material Specification
+                                                <i class="fas fa-box"></i> Material Specification
                                             </button>
                                         </h5>
                                     </div>
                                     <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
                                         <div class="card-body">
-                                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                            <span>
+                                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                            </span>
+                                            <div class="table-responsive" style="margin-top: 15px">
+                                                <table class="table">
+                                                    <tbody>
+                                                        <tr>
+                                                            <th>Wire Type</th>
+                                                            <td>Cu</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Wire Size(mil)</th>
+                                                            <td>0.96</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Wire App</th>
+                                                            <td>Cu</td>
+                                                        </tr>                                                     
+                                                    </tbody>
+                                                </table>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col col-sm-4" >
+                        <div class="col col-sm-3" >
                             <div class="col col-sm-12" style="border:1px solid #a9a9a9; background-color: #eee;">
                                 <div class="row">
-                                    <div class="col col-sm-12">
-                                        <h5>Material Name</h5>
+                                    <div class="col col-sm-12" style="margin-bottom: 15px; margin-top: 10px; text-align: center">
+                                        <h5>Electroformed Bond Hub Blades - ZH14SERIES</h5>
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="col col-sm-8">
-                                        Current Price
-                                    </div>
-                                    <div class="col col-sm-4" style="text-align:right">
-                                        $1,234.00
-                                    </div>
+
+
+                                <div class="table-responsive" style="margin-bottom 10px">
+                                    <table class="table">
+                                        <tbody>
+                                            <tr>
+                                                <th>Rating</th>
+                                                <td style="text-align:right">
+                                                    <a href="#">   <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i> 4.0</a> 
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>Current Price</th>
+                                                <td style="text-align:right">
+                                                    <a href="#">    $256.00 per unit</a> 
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>Price Change (YoY)</th>
+                                                <td style="text-align:right">
+                                                    <a href="#" style="color: red">2.0%</a> 
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>A/T Sites using the Material</th>
+                                                <td style="text-align:right"> (3 sites) <a href="#">TIPI</a> | <a href="#">TIEM</a> | <a href="#">TITL</a></td>
+                                            </tr>
+                                            <tr>
+                                                <th>Applicable Process</th>
+                                                <td style="text-align:right">(2 processes) <a href="#">1 Pass</a> | <a href="#">2 Pass</a> | <a href="#">TITL</a></td>
+                                            </tr>
+                                            <tr>
+                                                <th>Device Compatibility</th>
+                                                <td style="text-align:right"> (5 machines) <a href="#">Machine ABC</a> | <a href="#">Machine EDE</a> | <a href="#">Machine FGS</a></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
+
                             </div>
                         </div>
                     </div>
@@ -162,13 +299,33 @@
                                     <div class="card-header" id="headingSupplierInfo">
                                         <h5 class="mb-0">
                                             <button class="btn btn-link" data-toggle="collapse" data-target="#collapseSupplierInfo" aria-expanded="true" aria-controls="collapseSupplierInfo">
-                                                Supplier Informantion
+                                                <i class="fas fa-map-marked"></i> Supplier Informantion
                                             </button>
                                         </h5>
                                     </div>
                                     <div id="collapseSupplierInfo" class="collapse show" aria-labelledby="headingSupplierInfo" data-parent="#accordionProductInfo">
                                         <div class="card-body">
-                                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                            <span>
+                                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                            </span>
+                                            <div class="table-responsive" style="margin-top: 15px">
+                                                <table class="table">
+                                                    <tbody>
+                                                        <tr>
+                                                            <th>Head Office</th>
+                                                            <td>DISCO HI-TEC (SINGAPORE) PTE LTD Singapore Head Office, 80 Ubi Avenue 4, #06-01 Singapore 408831</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Contact Number</th>
+                                                            <td>Phone: 65-6747-3737, Fax: 65-6745-0266 </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Email Address</th>
+                                                            <td>dhssales@discosin.com.sg</td>
+                                                        </tr>                                                     
+                                                    </tbody>
+                                                </table>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -176,13 +333,33 @@
                                     <div class="card-header" id="headingDeliveryInfo">
                                         <h5 class="mb-0">
                                             <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseDeliveryInfo" aria-expanded="false" aria-controls="collapseDeliveryInfo">
-                                                Delivery Information
+                                                <i class="fas fa-truck"></i> Delivery Information
                                             </button>
                                         </h5>
                                     </div>
                                     <div id="collapseDeliveryInfo" class="collapse" aria-labelledby="headingDeliveryInfo" data-parent="#accordionProductInfo">
                                         <div class="card-body">
-                                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                            <span>
+                                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                            </span>
+                                            <div class="table-responsive" style="margin-top: 15px">
+                                                <table class="table">
+                                                    <tbody>
+                                                        <tr>
+                                                            <th>Supplier Lead Time</th>
+                                                            <td>7 days</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Supplier Delivery Capacity</th>
+                                                            <td>1M Units</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Supplier Distribution Centers</th>
+                                                            <td>Japan</td>
+                                                        </tr>                                                     
+                                                    </tbody>
+                                                </table>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -190,13 +367,33 @@
                                     <div class="card-header" id="headingUsageInfo">
                                         <h5 class="mb-0">
                                             <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseUsageInfo" aria-expanded="false" aria-controls="collapseUsageInfo">
-                                                Usage Information
+                                                <i class="fas fa-users-cog"></i> Usage Information
                                             </button>
                                         </h5>
                                     </div>
                                     <div id="collapseUsageInfo" class="collapse" aria-labelledby="headingUsageInfo" data-parent="#accordionProductInfo">
                                         <div class="card-body">
-                                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                            <span>
+                                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                            </span>
+                                            <div class="table-responsive" style="margin-top: 15px">
+                                                <table class="table">
+                                                    <tbody>
+                                                        <tr>
+                                                            <th>Available stock in TI Inventory</th>
+                                                            <td>2,000,000 units</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Average Monthly usage</th>
+                                                            <td>3,000 units</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Re-stocking Level - Min</th>
+                                                            <td>100,000 units</td>
+                                                        </tr>                                                     
+                                                    </tbody>
+                                                </table>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -606,7 +803,7 @@
                             <h4>Drivers and Manuals</h4>
                             <div>Tutorials, videos and other resources to help you identify and resolve issues.</div>
                             <div class="row">
-                                <div class="col col-sm-6">
+                                <div class="col col-sm-6" style="margin-top: 15px;">
                                     <h5>Top Solutions</h5>
                                     <ul>
                                         <li><a href="#">How to install the device?</a></li>
@@ -620,12 +817,93 @@
                                 </div>
                                 <div class="col col-sm-6">
                                     <h5>Additional Resources</h5>
-                                    <ul>
-                                        <li><a href="#">How to install the device?</a></li>
-                                        <li><a href="#">How to install the replace the device?</a></li>
-                                        <li><a href="#">How to configure device for Device ABC?</a></li>
-                                        <li><a href="#">How to configure device for Machine 1234?</a></li>
-                                    </ul>
+                                    <div class="row" style="margin-top: 45px">
+                                        <div class="col-sm text-center">
+                                            <a href="#">
+                                                <i class="fas fa-atlas fa-2x"></i>
+                                            </a>
+                                            <h6>Support by Topic</h6>
+                                        </div>
+                                        <div class="col-sm text-center">
+                                            <a href="#">
+                                                <i class="fas fa-arrow-alt-circle-down fa-2x"></i>
+                                            </a>
+                                            <h6>Software and Downloads</h6>
+                                        </div>
+                                        <div class="col-sm text-center">
+                                            <a href="#">
+                                                <i class="fas fa-parachute-box fa-2x"></i>
+                                            </a>
+                                            <h6>Contact Supplier</h6>    
+                                        </div>
+                                        <div class="col-sm text-center">
+                                            <a href="#">
+                                                <i class="fab fa-searchengin fa-2x"></i>
+                                            </a>
+                                            <h6>Assisted Search</h6>
+                                        </div>
+                                    </div>                             
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col col-sm" style="margin-top: 25px">
+                                    <h4>Questions</h4>
+                                    <div class="card">
+                                        <div class="card-header">
+                                            1 - 2 of 105 Questions
+                                            <button class="btn btn-primary float-right">Ask a Question</button>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="row" style="border-bottom: 1px solid rgba(0,0,0,.125)">
+                                                <div class="col col-sm">
+                                                    <div class="row">
+                                                        <div class="col col-sm-8"
+                                                             <span><strong>A012345 Jane Doe, TIPI</strong> - <i>2 months ago</i></span>
+                                                            <h5>What is the process configuration for Machine ABC?</h5>
+                                                        </div>
+                                                        <div class="col col-sm">
+                                                            <div class="btn-group float-right" role="group" >
+                                                                <button class="btn btn-default">Answer this Question</button>
+                                                                <button class="btn btn-success">2 Answers</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="background-color: #fff7e5">
+                                                        <div class="col col-sm" style="padding-left: 45px">
+                                                            <div><strong>A0111111 - Juan Luna, TIPI</strong> - <i>2 days ago</i></div>
+                                                            <div>
+                                                                Fusce maximus, libero eu vulputate volutpat, neque dolor elementum nisl, quis convallis ex libero ac nulla. Suspendisse sapien neque, mattis ut suscipit ut, fermentum eget nisi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean commodo sed dolor id egestas. Maecenas suscipit magna laoreet ex tincidunt, in luctus tortor sagittis. Aenean tortor lectus, luctus sit amet pharetra non, cursus aliquam neque. Nunc mattis dignissim mollis. Vivamus imperdiet risus nec gravida tincidunt. Vestibulum finibus ullamcorper euismod.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row" style="border-bottom: 1px solid rgba(0,0,0,.125); margin-top: 35px">
+                                                <div class="col col-sm">
+                                                    <div class="row">
+                                                        <div class="col col-sm-8"
+                                                             <span><strong>A0234212 Cardo Dalisay, TIPI</strong> - <i>23 days ago</i></span>
+                                                            <h5>What is max temperature tolerance of the device?</h5>
+                                                        </div>
+                                                        <div class="col col-sm">
+                                                            <div class="btn-group float-right" role="group" >
+                                                                <button class="btn btn-default">Answer this Question</button>
+                                                                <button class="btn btn-success">4 Answer</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row" style="background-color: #fff7e5">
+                                                        <div class="col col-sm" style="padding-left: 45px">
+                                                            <div><strong>A0128374 - Jose Rizal, TIEM</strong> - <i>5 days ago</i></div>
+                                                            <div>
+                                                                Vestibulum suscipit, lorem eu interdum pretium, ex elit pellentesque eros, et finibus nunc diam euismod leo. Aenean euismod augue non venenatis lobortis. Proin euismod lorem diam, sed rhoncus erat accumsan vel. Nunc id feugiat eros, sed egestas velit. Etiam accumsan dui lorem, vitae dignissim arcu ullamcorper ac. Curabitur placerat est in enim hendrerit sagittis. Vestibulum vel magna ac tortor efficitur vulputate ut ut risus.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -634,7 +912,6 @@
             </div>
         </div>
     </div>
-
 </div>
 
 

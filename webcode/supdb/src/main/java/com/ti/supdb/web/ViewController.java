@@ -23,4 +23,9 @@ public class ViewController {
 	public String view(final Model model) {
 		return "view/view";
 	}
+        
+         @RequestMapping("/commodity")
+	public String commodity(final Model model) {
+		return "view/commodity";
+	}
 }

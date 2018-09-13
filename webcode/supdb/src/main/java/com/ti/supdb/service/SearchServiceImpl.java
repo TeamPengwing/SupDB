@@ -1,7 +1,7 @@
 //$Id: SearchServiceImpl.java,v 1.4 2012/11/20 23:26:50 a0199948 Exp $
 package com.ti.supdb.service;
 
-import com.ti.supdb.domain.SearchResults; 
+import com.ti.supdb.domain.SearchResults;
 import com.ti.supdb.repository.SearchResultsDao;
 import java.sql.ResultSet;
 import java.util.ArrayList;
@@ -53,6 +53,7 @@ public class SearchServiceImpl implements SearchService {
 
         //return (ArrayList<SearchResults>) res.get("oResult"); 
         return temp;
-    } 
-
+    }
+    
+    
 }

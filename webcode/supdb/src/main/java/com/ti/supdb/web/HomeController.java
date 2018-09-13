@@ -9,11 +9,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 /**
- * Sample controller.
- * TODO: remove (demonstration only)
+ * Sample controller. TODO: remove (demonstration only)
  */
 @Controller
 public class HomeController {
+
     //---- Members
     // Pulls the "extraText" property value into the extraText member variable
     @Value("#{appProperties.extraText}")
@@ -22,43 +22,47 @@ public class HomeController {
     //---- Methods
     /**
      * Redirect to the about page.
+     *
      * @param model The data model
      * @return The view name - &quot;about&quot;
      */
+    
 	@RequestMapping("/")
 	public String hello(final Model model) {
-		return "about";
+		return "view/index";
 	}
-
-	/**
-	 * Selects the hello page and populates the model with a message.
+     
+    /**
+     * Selects the hello page and populates the model with a message.
+     *
      * @param model The data model
      * @param choice The value of the &quot;choice&quot; request parameter
      * @return The view name - &quot;hello&quot;
-	 */
-	@RequestMapping("/hello")
-	public String hello(final Model model,
-            @RequestParam(value="choice",required=false) final String choice) {
+     */
+    @RequestMapping("/hello")
+    public String hello(final Model model,
+            @RequestParam(value = "choice", required = false) final String choice) {
         model.addAttribute("choice", choice);
-		model.addAttribute("controllerMessage",
-				"This is the message from the controller!");
+        model.addAttribute("controllerMessage",
+                "This is the message from the controller!");
         model.addAttribute("extraText", extraText);
-		return "hello";
-	}
+        return "hello";
+    }
 
-	/**
-	 * Selects the goodbye page.
+    /**
+     * Selects the goodbye page.
+     *
      * @param model The data model
      * @param choice The value of the &quot;choice&quot; path variable
      * @return The view name - &quot;goodbye&quot;
-	 */
-	@RequestMapping("/goodbye/{choice}")
-	public String goodbye(final Model model,
+     */
+    @RequestMapping("/goodbye/{choice}")
+    public String goodbye(final Model model,
             @PathVariable("choice") final String choice) {
         model.addAttribute("choice", choice);
-		model.addAttribute("controllerMessage",
-				"The controller bids you adieu!");
-		return "goodbye";
-	}
+        model.addAttribute("controllerMessage",
+                "The controller bids you adieu!");
+        return "goodbye";
+    }
 
 }
