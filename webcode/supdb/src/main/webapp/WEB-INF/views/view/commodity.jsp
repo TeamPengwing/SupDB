@@ -24,7 +24,7 @@
         <link rel="stylesheet" href="css/tabulator.min.css">
         <script type="text/javascript" src="js/tabulator.min.js"></script>
 
-        <title>Peripheral</title>
+        <title>Import</title>
     </head>
     <body>
         <br>
@@ -254,7 +254,6 @@
                             columns: [
                                 {title: "View", field: "view", formatter: "link", align: "center", width: 60},
                                 {title: "Rating", headerFilter: minMaxFilterEditor, headerFilterFunc: minMaxFilterFunction, field: "rating", formatter: "star", align: "center", width: 100},
-                                {title: "Blade Supplier", field: "bladesupp", align: "center", editor: "input", headerFilter: "input", width: "100"},
                                 {title: "Supplier PN", field: "supn", align: "center", editor: "input", headerFilter: "input", width: "100"},
                                 {title: "Supplier PN2", field: "supn2", align: "center", editor: "input", headerFilter: "input", width: "100"},
                                 {title: "SITE", field: "site", align: "right", editor: "input", headerFilter: "input", width: "70"},
@@ -271,7 +270,7 @@
                                 {title: "Silicon Node Application", field: "silicon", editor: "input", headerFilter: "input", width: "60"},
                                 {title: "Minimum scribe width", field: "width", headerFilter: "input", width: "60"},
                                 {title: "Maximum wafer thickness", field: "thickness", headerFilter: "input", width: "60"},
-                                {title: "Dresser board application", field: "dresser", headerFilter: "input", width: "60"},
+                                {title: "Dresser board application", field: "dresser", headerFilter: "input", width: "60"},                            
                             ],
                         },
                         {//create column group
