@@ -16,7 +16,7 @@
         <h1>Usable Blade Exposure Calculator</h1>
     </div>
     <div class="row">
-        <div  class="my-3 p-3 bg-white rounded shadow-sm col-sm-2" >   
+        <div  class="my-3 p-3 bg-light rounded shadow-sm col-sm-2" >   
             <form id="data1" class="needs-validation" novalidate>
                 <div> 
                     <h4>Enter following information </h4>
@@ -29,7 +29,7 @@
                         <option value="1">Single Pass</option>
                         <option value="2">Two Pass</option>
                         <option value="3">Step Cut</option>
-                    </select><br>
+                    </select> 
                 </div>
 
                 <div class="form-group"  >
@@ -60,7 +60,7 @@
 
         </div>  
 
-        <div class="my-3 p-3 bg-white rounded shadow-sm col-sm-2">
+        <div class="my-3 p-3 bg-light rounded shadow-sm col-sm-2">
             <div>
                 <h4>RESULTS</h4> 
             </div>
@@ -184,8 +184,7 @@
             ["TIPI", "Disco", "4671323-0001", "ZH05-SD2000-N1-90-N2409 HEFF1073", "546.30"],
             ["TIPI", "Disco", "5150000-0529", "ZHT-2408 1040-SE 27HDDD-Z11", "516.70"],
             ["TIPI", "Disco", "5267000-0010", "ZHT-2411  104F-SE  27HDCC-Z2", "490.00"],
-            ["TIPI", "Disco", "4662369-0001", "ZH05-SD3000-N1-70-A2406 CC01-C402 ", "460.00"],
-            ["A/T Site", "Blade Supplier", "Supplier Part # Z1", "Blade type  Z1", "Life time Z1"],
+            ["TIPI", "Disco", "4662369-0001", "ZH05-SD3000-N1-70-A2406 CC01-C402 ", "460.00"], 
             ["TIPI", "Disco", "4662460-0001 ", "ZH05-SD4500-N1-50-N2392 HBAB2003", "220.00"],
             ["TIPI", "Disco", "4652841-0001", "ZHT-2395 204F-SE HDCC1098", "280.00"],
             ["TIPI", "Disco", "4649848-0001", "ZHT-2392 1030-SE HCDC2039", "270.80"],
