@@ -24,7 +24,7 @@
         <link rel="stylesheet" href="css/tabulator.min.css">
         <script type="text/javascript" src="js/tabulator.min.js"></script>
 
-        <title>Import</title>
+        <title>Peripheral</title>
     </head>
     <body>
         <br>
