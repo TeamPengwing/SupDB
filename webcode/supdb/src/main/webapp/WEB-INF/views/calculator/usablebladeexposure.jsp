@@ -24,8 +24,8 @@
 
                 <div class="form-group"  >
 
-                    <label id="waf" class="form-label">Select Dicing Cut Method</label>
-                    <select id="cut" class="form-control">
+                    <label id="waf"  >Select Dicing Cut Method</label>
+                    <select id="cut">
                         <option value="1">Single Pass</option>
                         <option value="2">Two Pass</option>
                         <option value="3">Step Cut</option>
@@ -34,23 +34,23 @@
 
                 <div class="form-group"  >
 
-                    <label id="exposure" class="form-label">Blade Exposure (um)</label>
+                    <label id="exposure">Blade Exposure (um)</label>
 
-                    <input id="exposure1" class="form-control" type="number" placeholder="Input minimum blade exposure in um"  value = "">  
+                    <input id="exposure1" type="number" placeholder="Input minimum blade exposure in um"  value = "">  
                 </div>
                 <div class="form-group ">
-                    <label  id="thick" class="form-label" >Wafer or Die Thickness (um)</label>
+                    <label  id="thick">Wafer or Die Thickness (um)</label>
 
-                    <input id="thick1"   class="form-control" type="number" placeholder="Wafer or Die Thickness (um)" value = "">  
+                    <input id="thick1" type="number" placeholder="Wafer or Die Thickness (um)" value = "">  
                 </div> 
                 <div class="form-group  ">
-                    <label  id="thru" class="form-label" >Cut Thru Die (%)</label>
-                    <input id="thru1"  class="form-control" type="number" placeholder="% Cut thru Die Thickness - ignore if single pass" value = ""> 
+                    <label  id="thru">Cut Thru Die (%)</label>
+                    <input id="thru1" type="number" placeholder="% Cut thru Die Thickness - ignore if single pass" value = ""> 
 
                 </div>
                 <div class="form-group ">
-                    <label  id="tape"class="form-label" >Cut Thru Dicing Tape (um)</label> 
-                    <input  id="tape1"  class="form-control" type="number" placeholder="Input cut thru dicing tape in um (25um default)"   value = "">
+                    <label  id="tape">Cut Thru Dicing Tape (um)</label> 
+                    <input  id="tape1" type="number" placeholder="Input cut thru dicing tape in um (25um default)"   value = "">
 
                 </div>
 
@@ -67,8 +67,8 @@
 
             <form id="output1">
                 <div class="form-group">
-                    <label id="ube" class="form-label" >Usable Blade Exposure (um)  </label>
-                    <strong><label id="ube1" type="number" class="form-label" ></label></strong>
+                    <label id="ube">Usable Blade Exposure (um)  </label>
+                    <label id="ube1" type="number" ></label>
                 </div>
 
             </form>
@@ -78,9 +78,9 @@
             <div>
                 <h4>Related Peripheral</h4> 
             </div>
-            <table id="example" class="display">
+            <table id="bladeresult" class="display">
 
-
+             
             </table>
         </div>
     </div>
@@ -88,8 +88,6 @@
 
 
     <script type="text/javascript">
-
-
         function myFunction() {
 
             var x = document.getElementById("exposure1").value;
@@ -135,13 +133,6 @@
 
                 document.getElementById("ube1").innerHTML = use;
 
-                if (use >= 460) {
-                    createtable(dataSet460);
-                } else if (use >= 330) {
-                    createtable(dataSet330);
-                } else {
-                    createtable(dataSet168);
-                }
 
             }
 
@@ -159,8 +150,7 @@
             }
             return false;
         }
-
-        var dataSet460 = [
+        var dataSet = [
             ["TI Clark", "Disco", "1031138-0309", "D3500-0-110 27HCEE  ", "711.00"],
             ["TIPI", "Disco", "1031138-0309", "ZH01-SD3500-0-110-N2392  EE", "690.00"],
             ["TI Clark", "Disco", "4679155-0001", "ZH05-SD3500-N1-90-N2392 DE", "654.00"],
@@ -172,6 +162,7 @@
             ["TIPI", "Disco", "5267000-0010", "ZHT-2411  104F-SE  27HDCC-Z2", "490.00"],
             ["TIPI", "Disco", "4662369-0001", "ZH05-SD3000-N1-70-A2406 CC01-C402 ", "460.00"]
         ];
+<<<<<<< HEAD
 
 
         var dataSet168 = [
@@ -235,11 +226,39 @@
             $('#example').DataTable().destroy();
             $('#example').DataTable({
                 data: dsvale
+=======
+/*
+        function createtable() {
+            document.getElementById('#bladeresult').DataTable({
+                data: dataSet,
+                columns: [
+                    {title: "Name"},
+                    {title: "Position"},
+                    {title: "Office"},
+                    {title: "Extn."},
+                    {title: "Start date"},
+                    {title: "Salary"}
+                ]
+>>>>>>> 2c45f45f774f6abb68bcb9a9829b26c28fb22227
             });
         }
-
+        ;
+*/
+        $(document).ready(function () {
+            $('#bladeresult').DataTable({
+                data: dataSet,
+                columns: [
+                    {title: "Name"},
+                    {title: "Position"},
+                    {title: "Office"},
+                    {title: "Extn."},
+                    {title: "Start date"},
+                    {title: "Salary"}
+                ]
+            });
+        });
+ <script src="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+          <script src="https://code.jquery.com/jquery-3.3.1.js">
 
     </script>
-    <script src="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
-    <script src="https://code.jquery.com/jquery-3.3.1.js">
-            </div>
+</div>
