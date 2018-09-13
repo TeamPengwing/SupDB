@@ -255,6 +255,7 @@ public class SearchResults implements Serializable {
      */
     public void setImageSrc(String imageSrc) {
         this.imageSrc = imageSrc;
+        //URL of image
     }
 
 }
