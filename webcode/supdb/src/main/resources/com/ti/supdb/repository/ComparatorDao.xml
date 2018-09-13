@@ -26,7 +26,25 @@
         <result property="materialDescription" column="material_description"/>
         <result property="materialType" column="material_type"/>
     </resultMap>
-
+    
+    <resultMap id="compDataFieldValueMap" type="com.ti.supdb.domain.CompDataFieldValue">
+        <result property="dataGroupId" column="data_group_id"/>
+        <result property="dataGroup" column="data_group"/>
+        <result property="dataFieldId" column="data_field_id"/>
+        <result property="dataField" column="data_field"/>
+        <result property="dataFieldValueMat1" column="mat_1_field_val"/>
+        <result property="dataFieldValueMat2" column="mat_2_field_val"/>
+        <result property="dataFieldValueMat3" column="mat_3_field_val"/>
+        <result property="dataFieldValueMat4" column="mat_4_field_val"/>
+    </resultMap>
+    
+    <resultMap id="compMaterialRatingMap" type="com.ti.supdb.domain.MaterialRating">
+        <result property="materialId" column="material_id"/>
+        <result property="materialName" column="material_name"/>
+        <result property="ratingValue" column="rating_value"/>
+        <result property="ratingType" column="rating_type"/>
+    </resultMap>
+    
     <select id="getAllDataGroupsWithSort" statementType="CALLABLE" parameterType="java.util.Map">
         call p_supdb_comparator.get_data_groups_sort (
         #{result, jdbcType=CURSOR, javaType=java.sql.ResultSet, mode=OUT, resultMap=comparatorDataGroupMap}
@@ -46,5 +64,23 @@
         #{result, jdbcType=CURSOR, javaType=java.sql.ResultSet, mode=OUT, resultMap=comparatorMaterialMap}
         )
     </select>
- 
+    
+    <select id="compGetFieldsWithValues" statementType="CALLABLE" parameterType="java.util.Map">
+        call p_supdb_comparator.get_field_val_per_mat (
+        #{groupId, jdbcType=NUMERIC, javaType=INTEGER, mode=IN},
+        #{matId1, jdbcType=NUMERIC, javaType=INTEGER, mode=IN},
+        #{matId2, jdbcType=NUMERIC, javaType=INTEGER, mode=IN},
+        #{matId3, jdbcType=NUMERIC, javaType=INTEGER, mode=IN},
+        #{matId4, jdbcType=NUMERIC, javaType=INTEGER, mode=IN},
+        #{result, jdbcType=CURSOR, javaType=java.sql.ResultSet, mode=OUT, resultMap=compDataFieldValueMap}
+        )
+    </select>
+    
+    <select id="compGetMaterialRating" statementType="CALLABLE" parameterType="java.util.Map">
+        call p_supdb_comparator.get_material_rating (
+        #{materialId, jdbcType=NUMERIC, javaType=INTEGER, mode=IN},
+        #{result, jdbcType=CURSOR, javaType=java.sql.ResultSet, mode=OUT, resultMap=compMaterialRatingMap}
+        )
+    </select>
+    
 </mapper>
