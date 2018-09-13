@@ -27,7 +27,6 @@
         <table class="table table-striped w-auto" id="maintable" >
             <thead>
                 <tr>
-
                     <th>Search Results</th>
                 </tr>
             </thead>
@@ -91,7 +90,7 @@
 
                         return('<h5><img src="' + data["imageSrc"] + '" height="50" width="50">' +
                                 ' <i class="fas fa-info-circle"></i><a href="view/view"> ' + data["materialname"] + ' </a>' 
-                                + '<a href="comparator/material/1" class="btn btn-info"><i class="fas fa-plus-circle"></i> Compare</a> </h5>'
+                                + '<a href="comparator/material/1" class="btn btn-info float-right"><i class="fas fa-plus-circle"></i> Compare</a> </h5>'
                                 + '<strong> Description: </strong>' + data["materialdesc"] + '<br />'
                                 + '<strong> Rating: </strong>' + data["rating"] + '<br />'
                                 + '<strong> ' + data["fieldname1"] + ': </strong>' + data["fieldvalue1"] + '<br />'
