@@ -17,30 +17,30 @@
         <h1>Cut Height Calculator</h1>
     </div>
     <div class="row" >
-        <div  class="my-3 p-3 bg-white rounded shadow-sm col-sm-2" >   
+        <div  class="my-3 p-3 bg-light rounded shadow-sm col-sm-2" >   
             <form id="data1" class="needs-validation" novalidate>
                 <div> 
                     <h4>Enter die and dicing tape information</h4>
                 </div> 
                 <div class="form-group"  >
 
-                    <label id="die_thick">Die thickness (um)</label>
+                    <label class="form-label" id="die_thick">Die thickness (um)</label>
 
-                    <input  type="number" id="die_thick1"  name = "waf" placeholder="Input wafer or die thickness in um"  value = "">  
+                    <input  class="form-control" type="number" id="die_thick1"  name = "waf" placeholder="Input wafer or die thickness in um"  value = "">  
                 </div>
                 <div class="form-group ">
-                    <label id="tapex">Tape thickness (um)</label>
+                    <label class="form-label" id="tapex">Tape thickness (um)</label>
 
-                    <input type="number" id="tapex1" name = "diex" placeholder="Input tape thickness in um"  value = "">  
+                    <input class="form-control"  type="number" id="tapex1" name = "diex" placeholder="Input tape thickness in um"  value = "">  
                 </div> 
                 <div class="form-group  ">
-                    <label id="cutdt">Cut thru dicing tape (um)</label>
-                    <input type="number" id="cutdt1" name = "diex" placeholder="Input cut thru dicing tape in um (25um default)" value = ""> 
+                    <label class="form-label"  id="cutdt">Cut thru dicing tape (um)</label>
+                    <input class="form-control" type="number" id="cutdt1" name = "diex" placeholder="Input cut thru dicing tape in um (25um default)" value = ""> 
 
                 </div>
                 <div class="form-group ">
-                    <label id="zone">Z1 Cut Height %</label> 
-                    <input  id="zone1" type="number" placeholder="Input desired Z1 Cut Height %"   value = "">
+                    <label class="form-label" id="zone">Z1 Cut Height %</label> 
+                    <input  class="form-control" id="zone1" type="number" placeholder="Input desired Z1 Cut Height %"   value = "">
 
                 </div> 
 
@@ -51,22 +51,24 @@
 
         </div>  
 
-        <div class="my-3 p-3 bg-white rounded shadow-sm col-sm-2">
+        <div class="my-3 p-3 bg-light rounded shadow-sm col-sm-2">
             <div>
                 <h4>RESULTS</h4> 
             </div>
             <form id="output1">
                 <div class="form-group">
-                    <label id="zout">Z1 Cut Height (um / mil) </label>
-                    <label  id="zout1" type="number" ></label>
-                    <label >/</label>
-                    <label id="mil1" type="number"  ></label>
+                    <label class="form-label" id="zout">Z1 Cut Height (um / mil) </label>
+                   <strong> <label class="form-label"  id="zout1" type="number" ></label>
+                    <label class="form-label"  >/</label>
+                    <label class="form-label"  id="mil1" type="number"  ></label>
+                     </strong>
                 </div>
                 <div class="form-group">
-                    <label  id="zout2">Z2 Cut Height (um / mil)</label>
-                    <label id="zout21" type="number"></label>
-                    <label >/</label>
-                    <label id="mil2" type="number" ></label>
+                    <label  class="form-label" id="zout2">Z2 Cut Height (um / mil)</label>
+                <strong>    <label class="form-label" id="zout21" type="number"></label>
+                    <label class="form-label" >/</label>
+                    <label class="form-label"  id="mil2" type="number" ></label>
+                </strong>
                 </div>
 
 

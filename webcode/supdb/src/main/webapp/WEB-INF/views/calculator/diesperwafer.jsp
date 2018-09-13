@@ -22,23 +22,23 @@
                 </div> 
                 <div class="form-group"  >
 
-                    <label id="waf"  >Wafer diameter (mm)</label>
+                    <label id="waf" class="form-label" >Wafer diameter (mm)</label>
 
-                    <input type = "number" id="waf1"  name = "waf" placeholder="Input wafer diameter in mm"  value = "">  
+                    <input type = "number" id="waf1"  class="form-control" name = "waf" placeholder="Input wafer diameter in mm"  value = "">  
                 </div>
                 <div class="form-group ">
-                    <label id="diex"  >Die Size X (mm)</label>
+                    <label id="diex"  class="form-label">Die Size X (mm)</label>
 
-                    <input type = "number" id="diex1" name = "diex" placeholder="Input die size X in mm"   value = "">  
+                    <input type = "number" id="diex1" class="form-control" name = "diex" placeholder="Input die size X in mm"   value = "">  
                 </div> 
                 <div class="form-group  ">
-                    <label id="diey"  >Die Size Y (mm)</label>
-                    <input id="diey1" type="number" placeholder="Input die size Y in mm"  value = ""> 
+                    <label id="diey"  class="form-label">Die Size Y (mm)</label>
+                    <input id="diey1" type="number" class="form-control" placeholder="Input die size Y in mm"  value = ""> 
 
                 </div>
                 <div class="form-group ">
-                    <label id="mpy"  >MPY %</label> 
-                    <input  id="mpy1" type="number" placeholder="Input Multiprobe Yield percentage"    value = "">
+                    <label id="mpy"  class="form-label">MPY %</label> 
+                    <input  id="mpy1" type="number" class="form-control" placeholder="Input Multiprobe Yield percentage"    value = "">
 
                 </div>
 
@@ -54,16 +54,20 @@
             </div>
             <form id="output1">
                 <div class="form-group">
-                    <label id="dpw">Dies per wafer (units) </label>
-                    <label id="dpw1" type="number"></label>
+                    <label id="dpw"class="form-label">Dies per wafer (units) </label>
+                    <strong>
+                        <label id="dpw1" class="form-label" type="number"></label>
+                    </strong>
                 </div>
                 <div class="form-group">
-                    <label  id="xlines"># of X lines</label>
-                    <label id="xlines1" type="number" ></label>
+                    <label  id="xlines"class="form-label"># of X lines</label>
+                    <strong> 
+                        <label id="xlines1" class="form-label" type="number" ></label>
+                    </strong>
                 </div>
                 <div class="form-group">
-                    <label id="ylines"># of Y lines </label>
-                    <label id="ylines1" type="number" ></label>
+                    <label id="ylines"class="form-label"># of Y lines </label>
+                    <strong> <label id="ylines1" class="form-label" type="number" ></label></strong>
                 </div>
 
             </form>

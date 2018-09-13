@@ -13,16 +13,10 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-/**
- *
- * @author a0220616
- */
 @Service
 public class ComparatorServiceImpl implements ComparatorService {
 
-    @Autowired
-    private ComparatorDao comparatorDao;
-
+    //comment
     @Override
     public List<DataGroup> getAllDataGroupsWithSort() {
 
@@ -33,10 +27,10 @@ public class ComparatorServiceImpl implements ComparatorService {
 
         return (List<DataGroup>) params.get("result");*/
         List<DataGroup> list = new ArrayList<>();
-        for (int x = 1; x < 6; x++) {
-            DataGroup dg = new DataGroup(x, "Data group " + x, x, true);
-            list.add(dg);
-        }
+        list.add(new DataGroup(1, "General Information", 1, true));
+        list.add(new DataGroup(2, "Commodity specific application characteristics", 2, true));
+        list.add(new DataGroup(3, "Material Properties", 3, true));
+        list.add(new DataGroup(4, "Process Parameters", 4, true));
         return list;
     }
 
@@ -51,14 +45,69 @@ public class ComparatorServiceImpl implements ComparatorService {
 
         return (List<DataField>) params.get("result");*/
         List<DataField> list = new ArrayList<>();
-        for (int x = 1; x < 5; x++) {
-            DataField df = new DataField();
-            df.setDataFieldId(x);
-            df.setDataField("Data field " + x);
-            df.setDataGroupId(dataGroupId);
-            df.setDataValue("Data field value");
-            list.add(df);
+
+        if (dataGroupId == 1) {
+            DataField gdf1 = new DataField();
+            gdf1.setDataFieldId(1);
+            gdf1.setDataField("AT Site");
+            gdf1.setDataGroupId(1);
+            list.add(gdf1);
+
+            DataField gdf2 = new DataField();
+            gdf2.setDataFieldId(2);
+            gdf2.setDataField("Supplier");
+            gdf2.setDataGroupId(1);
+            list.add(gdf2);
+
+            DataField gdf3 = new DataField();
+            gdf3.setDataFieldId(3);
+            gdf3.setDataField("Part number 1");
+            gdf3.setDataGroupId(1);
+            list.add(gdf3);
         }
+
+        if (dataGroupId == 2) {
+            DataField g2df1 = new DataField();
+            g2df1.setDataFieldId(1);
+            g2df1.setDataField("Equipment Used");
+            g2df1.setDataGroupId(2);
+            list.add(g2df1);
+
+            DataField g2df2 = new DataField();
+            g2df2.setDataFieldId(2);
+            g2df2.setDataField("Cut Type");
+            g2df2.setDataGroupId(2);
+            list.add(g2df2);
+        }
+
+        if (dataGroupId == 3) {
+            DataField g3df1 = new DataField();
+            g3df1.setDataFieldId(1);
+            g3df1.setDataField("Diameter");
+            g3df1.setDataGroupId(3);
+            list.add(g3df1);
+
+            DataField g3df2 = new DataField();
+            g3df2.setDataFieldId(2);
+            g3df2.setDataField("Grit size Z1");
+            g3df2.setDataGroupId(3);
+            list.add(g3df2);
+        }
+
+        if (dataGroupId == 4) {
+            DataField g3df1 = new DataField();
+            g3df1.setDataFieldId(1);
+            g3df1.setDataField("RPM Z1");
+            g3df1.setDataGroupId(4);
+            list.add(g3df1);
+
+            DataField g3df2 = new DataField();
+            g3df2.setDataFieldId(2);
+            g3df2.setDataField("RPM Z2");
+            g3df2.setDataGroupId(4);
+            list.add(g3df2);
+        }
+
         return list;
     }
 
@@ -97,34 +146,119 @@ public class ComparatorServiceImpl implements ComparatorService {
         comparatorDao.compGetFieldsWithValues(params);
         
         return (List<CompDataFieldValue>) params.get("result");*/
+
         List<CompDataFieldValue> list = new ArrayList<>();
-        for (int x = 1; x < 6; x++) {
-            CompDataFieldValue df = new CompDataFieldValue();
-            if (x == 2 && (groupId == 1 || groupId == 3)) {
 
-                df.setDataFieldId(x);
-                df.setDataField("Data field " + x);
-                df.setDataFieldValueMat1(matId1 == 0 ? "" : "Data field value");
-                df.setDataFieldValueMat2(matId2 == 0 ? "" : "different");
-                df.setDataFieldValueMat3(matId3 == 0 ? "" : "Data field value");
-                df.setDataFieldValueMat4(matId4 == 0 ? "" : "Data field value");
-                df.setDataGroup("Data group " + x);
-                df.setDataGroupId(x);
+        if (groupId == 1) {
 
-            } else {
+            CompDataFieldValue g1df1 = new CompDataFieldValue();
+            g1df1.setDataFieldId(1);
+            g1df1.setDataField("AT Site");
+            g1df1.setDataFieldValueMat1(matId1 == 0 ? "" : "TIPI");
+            g1df1.setDataFieldValueMat2(matId2 == 0 ? "" : "TIPI");
+            g1df1.setDataFieldValueMat3(matId3 == 0 ? "" : "TIPI");
+            g1df1.setDataFieldValueMat4(matId4 == 0 ? "" : "TIPI");
+            g1df1.setDataGroupId(1);
+            list.add(g1df1);
 
-                df.setDataFieldId(x);
-                df.setDataField("Data field " + x);
-                df.setDataFieldValueMat1(matId1 == 0 ? "" : "Data field value");
-                df.setDataFieldValueMat2(matId2 == 0 ? "" : "Data field value");
-                df.setDataFieldValueMat3(matId3 == 0 ? "" : "Data field value");
-                df.setDataFieldValueMat4(matId4 == 0 ? "" : "Data field value");
-                df.setDataGroup("Data group " + x);
-                df.setDataGroupId(x);
+            CompDataFieldValue g1df2 = new CompDataFieldValue();
+            g1df2.setDataFieldId(2);
+            g1df2.setDataField("Supplier");
+            g1df2.setDataFieldValueMat1(matId1 == 0 ? "" : "Disco");
+
+            if (matId2 != 0) {
+                g1df2.setDataFieldValueMat2("different");
             }
 
-            list.add(df);
+            g1df2.setDataFieldValueMat3(matId3 == 0 ? "" : "Disco");
+            g1df2.setDataFieldValueMat4(matId4 == 0 ? "" : "Disco");
+            g1df2.setDataGroupId(1);
+            list.add(g1df2);
+
+            CompDataFieldValue g1df3 = new CompDataFieldValue();
+            g1df3.setDataFieldId(3);
+            g1df3.setDataField("Part number 1");
+            g1df3.setDataFieldValueMat1(matId1 == 0 ? "" : "4671323-0001");
+            g1df3.setDataFieldValueMat2(matId2 == 0 ? "" : "4671323-0001");
+            g1df3.setDataFieldValueMat3(matId3 == 0 ? "" : "4671323-0001");
+            g1df3.setDataFieldValueMat4(matId4 == 0 ? "" : "4671323-0001");
+            g1df3.setDataGroupId(1);
+            list.add(g1df3);
         }
+
+        if (groupId == 2) {
+            CompDataFieldValue g2df1 = new CompDataFieldValue();
+            g2df1.setDataFieldId(1);
+            g2df1.setDataField("Equipment Used");
+            g2df1.setDataFieldValueMat1(matId1 == 0 ? "" : "Data field value");
+            g2df1.setDataFieldValueMat2(matId2 == 0 ? "" : "Data field value");
+            g2df1.setDataFieldValueMat3(matId3 == 0 ? "" : "Data field value");
+            g2df1.setDataFieldValueMat4(matId4 == 0 ? "" : "Data field value");
+            g2df1.setDataGroupId(2);
+            list.add(g2df1);
+
+            CompDataFieldValue g2df2 = new CompDataFieldValue();
+            g2df2.setDataFieldId(2);
+            g2df2.setDataField("Cut Type");
+            g2df2.setDataFieldValueMat1(matId1 == 0 ? "" : "For Step cut Z1 blade");
+            if (matId2 != 0) {
+                g2df2.setDataFieldValueMat2("different");
+            }
+            g2df2.setDataFieldValueMat3(matId3 == 0 ? "" : "For Step cut Z1 blade");
+            g2df2.setDataFieldValueMat4(matId4 == 0 ? "" : "For Step cut Z1 blade");
+            g2df2.setDataGroupId(2);
+            list.add(g2df2);
+
+        }
+
+        if (groupId == 3) {
+            CompDataFieldValue g3df1 = new CompDataFieldValue();
+            g3df1.setDataFieldId(1);
+            g3df1.setDataField("Diameter");
+            g3df1.setDataFieldValueMat1(matId1 == 0 ? "" : "55.56mm");
+            if (matId2 != 0) {
+                g3df1.setDataFieldValueMat2("different");
+            }
+            g3df1.setDataFieldValueMat3(matId3 == 0 ? "" : "55.56mm");
+            g3df1.setDataFieldValueMat4(matId4 == 0 ? "" : "55.56mm");
+            g3df1.setDataGroupId(3);
+            list.add(g3df1);
+
+            CompDataFieldValue g3df2 = new CompDataFieldValue();
+            g3df2.setDataFieldId(2);
+            g3df2.setDataField("Grit size Z1");
+            g3df2.setDataFieldValueMat1(matId1 == 0 ? "" : "2000");
+            g3df2.setDataFieldValueMat2(matId2 == 0 ? "" : "2000");
+            g3df2.setDataFieldValueMat3(matId3 == 0 ? "" : "2000");
+            g3df2.setDataFieldValueMat4(matId4 == 0 ? "" : "2000");
+            g3df2.setDataGroupId(3);
+            list.add(g3df2);
+
+        }
+
+        if (groupId == 4) {
+            CompDataFieldValue g4df1 = new CompDataFieldValue();
+            g4df1.setDataFieldId(1);
+            g4df1.setDataField("RPM Z1");
+            g4df1.setDataFieldValueMat1(matId1 == 0 ? "" : "55K");
+            g4df1.setDataFieldValueMat2(matId2 == 0 ? "" : "55K");
+            g4df1.setDataFieldValueMat3(matId3 == 0 ? "" : "55K");
+            g4df1.setDataFieldValueMat4(matId4 == 0 ? "" : "55K");
+            g4df1.setDataGroupId(4);
+            list.add(g4df1);
+
+            CompDataFieldValue g4df2 = new CompDataFieldValue();
+            g4df2.setDataFieldId(2);
+            g4df2.setDataField("RPM Z2");
+            g4df2.setDataFieldValueMat1(matId1 == 0 ? "" : "30K");
+            g4df2.setDataFieldValueMat2(matId2 == 0 ? "" : "30K");
+            g4df2.setDataFieldValueMat3(matId3 == 0 ? "" : "30K");
+            g4df2.setDataFieldValueMat4(matId4 == 0 ? "" : "30K");
+            g4df2.setDataGroupId(4);
+            list.add(g4df2);
+
+        }
+
         return list;
 
     }

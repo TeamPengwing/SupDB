@@ -23,6 +23,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @RequestMapping("/comparator")
 public class ComparatorController {
 
+    //comment
     @Autowired
     private ComparatorService comparatorService;
 

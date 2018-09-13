@@ -33,7 +33,8 @@
 
     .item-container
     {
-        background-color: #f8f9fa!important;
+        /* background-color: #f8f9fa!important;*/
+        background-color: #d9edf7!important;
         border: 1px solid #dee2e6 !important;
     }
 
@@ -79,37 +80,47 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
-
 <c:if test="${not empty id}">
     <input type="hidden" id="hiddenId" value="${id}">
 </c:if>
 
+<nav class="navbar navbar-light bg-light justify-content-between" style="border-bottom:1px solid gray">
+    <div style="text-align: center">
+        <a class="navbar-brand"><h4>Material Comparator</h4></a>
+    </div>
+
+    <form class="form-inline">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="searchBox">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+</nav>
+
 <div class="container-custom">
 
-    <nav class="navbar navbar-light bg-light justify-content-between">
-        <a class="navbar-brand">Part Number Comparator</a>
-        <form class="form-inline">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="searchBox">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
-    </nav>
+
 
     <div style="border: 1px solid #dee2e6; padding: 10px;">
         <div class="row" style="margin-top: 10px; margin-bottom: 10px;">
-            <div class="col-md-4">
-                <div class="btn-group" role="group" aria-label="Basic example">
-                    <button type="button" class="btn btn-primary" id="fullCompare">Full</button>
-                    <button type="button" class="btn btn-secondary" id="differenceCompare">Differences</button>
+            <div class="col-md-4">                
+                <div class="alert alert-secondary" role="alert" style="height: 200px">
+                    <h4>Compare Mode</h4>
+                    <div class="btn-group" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-primary" id="fullCompare">Full</button>
+                        <button type="button" class="btn btn-secondary" id="differenceCompare">Differences</button>
+                    </div>
+                    <small class="form-text text-muted"><i class="fas fa-info-circle"></i> Change compare mode</small>
+                    <input type="hidden" id="currentCompareMode">
                 </div>
-                <small class="form-text text-muted"><i class="fas fa-info-circle"></i> Change compare mode</small>
-                <input type="hidden" id="currentCompareMode">
             </div>
             <div class="col-md-8">
-                <div id="dataGroupContainer">
+                <div class="alert alert-secondary" role="alert" style="height: 200px">
+                    <h4>Data Groups</h4>
+                    <div id="dataGroupContainer">
+                    </div>
+                    <button id="applyDataGroupOptions" type="button" class="btn btn-primary btn-sm">Apply</button>
+                    <button id="sortDataGroupOptions" type="button" class="btn btn-primary btn-sm">Sort</button>
+                    <small class="form-text text-muted"><i class="fas fa-info-circle"></i> Select information to display</small>
                 </div>
-                <button id="applyDataGroupOptions" type="button" class="btn btn-primary btn-sm">Apply</button>
-                <button id="sortDataGroupOptions" type="button" class="btn btn-primary btn-sm">Sort</button>
-                <small class="form-text text-muted"><i class="fas fa-info-circle"></i> Select information to display</small>
             </div>
         </div>   
     </div>
@@ -127,10 +138,11 @@
                         <small class="form-text text-muted"><i class="fas fa-info-circle"></i> Enter material</small>
                         <div>
                             <label id="partNum1" data-value="0" class="part-num-label"></label>
+                            <br>
+                            <div id="partNum1-image">
+
+                            </div>
                         </div>
-                        <div class="item-image-default">
-                            <i class="fas fa-cog"></i>
-                        </div>                        
                     </th>
                     <th class="item-container">
                         <div class="form-inline">
@@ -140,10 +152,11 @@
                         <small class="form-text text-muted"><i class="fas fa-info-circle"></i> Enter material</small>
                         <div>
                             <label id="partNum2" data-value="0" class="part-num-label"></label>
-                        </div>
-                        <div class="item-image-default">
-                            <i class="fas fa-cog"></i>
-                        </div>                        
+                            <br>
+                            <div id="partNum2-image">
+
+                            </div>
+                        </div>                  
                     </th>
                     <th class="item-container">
                         <div class="form-inline">
@@ -153,10 +166,11 @@
                         <small class="form-text text-muted"><i class="fas fa-info-circle"></i> Enter material</small>
                         <div data-searchbox="3">
                             <label id="partNum3" data-value="0" class="part-num-label"></label>
-                        </div>
-                        <div class="item-image-default">
-                            <i class="fas fa-cog"></i>
-                        </div>                        
+                            <br>
+                            <div id="partNum3-image">
+
+                            </div>
+                        </div>                    
                     </th>
                     <th class="item-container">
                         <div class="form-inline">
@@ -166,10 +180,11 @@
                         <small class="form-text text-muted"><i class="fas fa-info-circle"></i> Enter material</small>
                         <div>
                             <label id="partNum4" data-value="0" class="part-num-label"></label>
-                        </div>
-                        <div class="item-image-default">
-                            <i class="fas fa-cog"></i>
-                        </div>                        
+                            <br>
+                            <div id="partNum4-image">
+
+                            </div>
+                        </div>                     
                     </th>
                 </tr>
                 <tr>
@@ -184,6 +199,8 @@
                             <span class="fa fa-star checked-star"></span>
                             <span class="fa fa-star"></span>
                             <span class="fa fa-star"></span>
+                            <br>
+                            <a href="/supdb/view/view">Click to view more details</a>
                         </div>
                     </th>
                     <th>
@@ -196,6 +213,8 @@
                             <span class="fa fa-star checked-star"></span>
                             <span class="fa fa-star"></span>
                             <span class="fa fa-star"></span>
+                            <br>
+                            <a href="/supdb/view/view">Click to view more details</a>
                         </div>
                     </th>
                     <th>
@@ -208,6 +227,8 @@
                             <span class="fa fa-star checked-star"></span>
                             <span class="fa fa-star"></span>
                             <span class="fa fa-star"></span>
+                            <br>
+                            <a href="/supdb/view/view">Click to view more details</a>
                         </div>
                     </th>
                     <th>
@@ -220,6 +241,8 @@
                             <span class="fa fa-star checked-star"></span>
                             <span class="fa fa-star"></span>
                             <span class="fa fa-star"></span>
+                            <br>
+                            <a href="/supdb/view/view">Click to view more details</a>
                         </div>
                     </th>
                 </tr>
@@ -266,7 +289,8 @@
         if ($('#hiddenId').val() == "1")
         {
             $('#partNum1').text("Material 1").attr('data-value', "1");
-            
+            $('#partNum1-image').append('<img style="height: 100px;" src="https://www.disco.co.jp/eg/products/blade/images/zh05.jpg">');
+
             // reload table rows
             var dataGroups = [];
             $('div#dataGroupContainer input[type=checkbox]').each(function () {
@@ -402,15 +426,22 @@
             {
                 case "1":
                     $('#partNum1').text(selectedItemLabel).attr('data-value', selectedItemValue);
+                    $('#partNum1-image').append('<img style="height: 100px;" src="https://www.disco.co.jp/eg/products/blade/images/zh05.jpg">');
                     break;
                 case "2":
                     $('#partNum2').text(selectedItemLabel).attr('data-value', selectedItemValue);
+                    $('#partNum2-image').append('<img style="height: 100px;" src="https://www.disco.co.jp/eg/products/blade/images/zh05.jpg">');
+
                     break;
                 case "3":
                     $('#partNum3').text(selectedItemLabel).attr('data-value', selectedItemValue);
+                    $('#partNum3-image').append('<img style="height: 100px;" src="https://www.disco.co.jp/eg/products/blade/images/zh05.jpg">');
+
                     break;
                 case "4":
                     $('#partNum4').text(selectedItemLabel).attr('data-value', selectedItemValue);
+                    $('#partNum4-image').append('<img style="height: 100px;" src="https://www.disco.co.jp/eg/products/blade/images/zh05.jpg">');
+
                     break;
             }
             // reload table rows

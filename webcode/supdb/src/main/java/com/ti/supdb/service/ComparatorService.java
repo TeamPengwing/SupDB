@@ -7,12 +7,9 @@ import com.ti.supdb.domain.CompDataFieldValue;
 import com.ti.supdb.domain.MaterialRating;
 import java.util.List;
 
-/**
- *
- * @author a0220616
- */
 public interface ComparatorService {
 
+    // comment
     List<DataGroup> getAllDataGroupsWithSort();
 
     List<DataField> getDataFieldsByDataGroupId(int dataGroupId);
