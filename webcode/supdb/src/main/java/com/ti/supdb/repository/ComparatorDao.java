@@ -21,14 +21,14 @@ import java.util.Map;
 @MyBatisRepository
 public interface ComparatorDao {
 
-    List<DataGroup> getAllDataGroupsWithSort(Map<String, Object> params);
-
-    List<DataField> getDataFieldsByDataGroupId(Map<String, Object> params);
-
-    List<Material> compGetMaterial(Map<String, Object> params);
-
-    List<CompDataFieldValue> compGetFieldsWithValues(Map<String, Object> params);
-
-    List<MaterialRating> compGetMaterialRating(Map<String, Object> params);
+//    List<DataGroup> getAllDataGroupsWithSort(Map<String, Object> params);
+//
+//    List<DataField> getDataFieldsByDataGroupId(Map<String, Object> params);
+//
+//    List<Material> compGetMaterial(Map<String, Object> params);
+//
+//    List<CompDataFieldValue> compGetFieldsWithValues(Map<String, Object> params);
+//
+//    List<MaterialRating> compGetMaterialRating(Map<String, Object> params);
 
 }
