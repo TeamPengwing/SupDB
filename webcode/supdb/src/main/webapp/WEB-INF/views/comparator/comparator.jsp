@@ -87,7 +87,7 @@
 <div class="container-custom">
 
     <nav class="navbar navbar-light bg-light justify-content-between">
-        <a class="navbar-brand">Part Number Comparator</a>
+        <a class="navbar-brand">Material Comparator</a>
         <form class="form-inline">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="searchBox">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
@@ -184,6 +184,8 @@
                             <span class="fa fa-star checked-star"></span>
                             <span class="fa fa-star"></span>
                             <span class="fa fa-star"></span>
+                            <br>
+                            <a href="/supdb/view/view">Click to view more details</a>
                         </div>
                     </th>
                     <th>
@@ -196,6 +198,8 @@
                             <span class="fa fa-star checked-star"></span>
                             <span class="fa fa-star"></span>
                             <span class="fa fa-star"></span>
+                            <br>
+                            <a href="/supdb/view/view">Click to view more details</a>
                         </div>
                     </th>
                     <th>
@@ -208,6 +212,8 @@
                             <span class="fa fa-star checked-star"></span>
                             <span class="fa fa-star"></span>
                             <span class="fa fa-star"></span>
+                            <br>
+                            <a href="/supdb/view/view">Click to view more details</a>
                         </div>
                     </th>
                     <th>
@@ -220,6 +226,8 @@
                             <span class="fa fa-star checked-star"></span>
                             <span class="fa fa-star"></span>
                             <span class="fa fa-star"></span>
+                            <br>
+                            <a href="/supdb/view/view">Click to view more details</a>
                         </div>
                     </th>
                 </tr>
@@ -266,7 +274,7 @@
         if ($('#hiddenId').val() == "1")
         {
             $('#partNum1').text("Material 1").attr('data-value', "1");
-            
+
             // reload table rows
             var dataGroups = [];
             $('div#dataGroupContainer input[type=checkbox]').each(function () {
