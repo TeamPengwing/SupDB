@@ -24,7 +24,7 @@
 <div class="container-fluid">    
 
 
-        <table class="table table-striped w-auto" id="maintable" >
+        <table class="table table-striped" id="maintable" style="width:80%" >
             <thead>
                 <tr>
                     <th>Search Results</th>
