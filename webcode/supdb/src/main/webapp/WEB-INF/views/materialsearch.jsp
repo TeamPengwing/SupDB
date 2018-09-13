@@ -110,7 +110,7 @@
         });
         
         //var str = jQuery.param( search );
-        //alert(str);
+        //show results
         var str = document.URL.split('?')[1];
         str = str.split('=')[1];
         if(str){
