@@ -148,7 +148,7 @@ public class SearchController {
                 "3","https://jp.toto.com/E_Cera/bonding/images/bonding-p01.jpg"));
         ret.put("data", ar);
         
-        
+        //static data for now
         
         //ret.put("total", ar.size());
         //ret.put("data", searchService.getSearchResults(searchText));
