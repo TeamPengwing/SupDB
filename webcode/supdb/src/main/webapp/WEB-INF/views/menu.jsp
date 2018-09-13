@@ -17,9 +17,7 @@
                     <li class="nav-item active">
                         <a class="nav-link" href='<c:url value="/"/>'>Home</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
+                   
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Peripherals
@@ -41,8 +39,8 @@
                             <a class="dropdown-item" href='<c:url value="cutheightcalc"/>'>Cut Height</a> 
                         </div>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="#">Disabled</a>
+                     <li class="nav-item">
+                        <a class="nav-link" href="comparator">Compare</a>
                     </li>
                 </ul>
 
