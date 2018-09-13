@@ -33,7 +33,8 @@
 
     .item-container
     {
-        background-color: #f8f9fa!important;
+        /* background-color: #f8f9fa!important;*/
+        background-color: #d9edf7!important;
         border: 1px solid #dee2e6 !important;
     }
 
@@ -79,37 +80,47 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
-
 <c:if test="${not empty id}">
     <input type="hidden" id="hiddenId" value="${id}">
 </c:if>
 
+<nav class="navbar navbar-light bg-light justify-content-between" style="border-bottom:1px solid gray">
+    <div style="text-align: center">
+        <a class="navbar-brand"><h4>Material Comparator</h4></a>
+    </div>
+
+    <form class="form-inline">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="searchBox">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+</nav>
+
 <div class="container-custom">
 
-    <nav class="navbar navbar-light bg-light justify-content-between">
-        <a class="navbar-brand">Material Comparator</a>
-        <form class="form-inline">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="searchBox">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
-    </nav>
+
 
     <div style="border: 1px solid #dee2e6; padding: 10px;">
         <div class="row" style="margin-top: 10px; margin-bottom: 10px;">
-            <div class="col-md-4">
-                <div class="btn-group" role="group" aria-label="Basic example">
-                    <button type="button" class="btn btn-primary" id="fullCompare">Full</button>
-                    <button type="button" class="btn btn-secondary" id="differenceCompare">Differences</button>
+            <div class="col-md-4">                
+                <div class="alert alert-secondary" role="alert" style="height: 200px">
+                    <h4>Compare Mode</h4>
+                    <div class="btn-group" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-primary" id="fullCompare">Full</button>
+                        <button type="button" class="btn btn-secondary" id="differenceCompare">Differences</button>
+                    </div>
+                    <small class="form-text text-muted"><i class="fas fa-info-circle"></i> Change compare mode</small>
+                    <input type="hidden" id="currentCompareMode">
                 </div>
-                <small class="form-text text-muted"><i class="fas fa-info-circle"></i> Change compare mode</small>
-                <input type="hidden" id="currentCompareMode">
             </div>
             <div class="col-md-8">
-                <div id="dataGroupContainer">
+                <div class="alert alert-secondary" role="alert" style="height: 200px">
+                    <h4>Data Groups</h4>
+                    <div id="dataGroupContainer">
+                    </div>
+                    <button id="applyDataGroupOptions" type="button" class="btn btn-primary btn-sm">Apply</button>
+                    <button id="sortDataGroupOptions" type="button" class="btn btn-primary btn-sm">Sort</button>
+                    <small class="form-text text-muted"><i class="fas fa-info-circle"></i> Select information to display</small>
                 </div>
-                <button id="applyDataGroupOptions" type="button" class="btn btn-primary btn-sm">Apply</button>
-                <button id="sortDataGroupOptions" type="button" class="btn btn-primary btn-sm">Sort</button>
-                <small class="form-text text-muted"><i class="fas fa-info-circle"></i> Select information to display</small>
             </div>
         </div>   
     </div>

@@ -13,16 +13,10 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-/**
- *
- * @author a0220616
- */
 @Service
 public class ComparatorServiceImpl implements ComparatorService {
 
-    @Autowired
-    private ComparatorDao comparatorDao;
-
+    //comment
     @Override
     public List<DataGroup> getAllDataGroupsWithSort() {
 
@@ -152,18 +146,18 @@ public class ComparatorServiceImpl implements ComparatorService {
         comparatorDao.compGetFieldsWithValues(params);
         
         return (List<CompDataFieldValue>) params.get("result");*/
-        
+
         List<CompDataFieldValue> list = new ArrayList<>();
 
         if (groupId == 1) {
-           
+
             CompDataFieldValue g1df1 = new CompDataFieldValue();
             g1df1.setDataFieldId(1);
             g1df1.setDataField("AT Site");
-            g1df1.setDataFieldValueMat1(matId1 == 0 ? "" : "Data field value");
-            g1df1.setDataFieldValueMat2(matId2 == 0 ? "" : "Data field value");
-            g1df1.setDataFieldValueMat3(matId3 == 0 ? "" : "Data field value");
-            g1df1.setDataFieldValueMat4(matId4 == 0 ? "" : "Data field value");
+            g1df1.setDataFieldValueMat1(matId1 == 0 ? "" : "TIPI");
+            g1df1.setDataFieldValueMat2(matId2 == 0 ? "" : "TIPI");
+            g1df1.setDataFieldValueMat3(matId3 == 0 ? "" : "TIPI");
+            g1df1.setDataFieldValueMat4(matId4 == 0 ? "" : "TIPI");
             g1df1.setDataGroupId(1);
             list.add(g1df1);
 
@@ -171,12 +165,11 @@ public class ComparatorServiceImpl implements ComparatorService {
             g1df2.setDataFieldId(2);
             g1df2.setDataField("Supplier");
             g1df2.setDataFieldValueMat1(matId1 == 0 ? "" : "Data field value");
-            
-            if(matId2!=0)
-            {
+
+            if (matId2 != 0) {
                 g1df2.setDataFieldValueMat2("different");
             }
-            
+
             g1df2.setDataFieldValueMat3(matId3 == 0 ? "" : "Data field value");
             g1df2.setDataFieldValueMat4(matId4 == 0 ? "" : "Data field value");
             g1df2.setDataGroupId(1);
@@ -208,8 +201,7 @@ public class ComparatorServiceImpl implements ComparatorService {
             g2df2.setDataFieldId(2);
             g2df2.setDataField("Cut Type");
             g2df2.setDataFieldValueMat1(matId1 == 0 ? "" : "Data field value");
-            if(matId2!=0)
-            {
+            if (matId2 != 0) {
                 g2df2.setDataFieldValueMat2("different");
             }
             g2df2.setDataFieldValueMat3(matId3 == 0 ? "" : "Data field value");
@@ -224,8 +216,7 @@ public class ComparatorServiceImpl implements ComparatorService {
             g3df1.setDataFieldId(1);
             g3df1.setDataField("Diameter");
             g3df1.setDataFieldValueMat1(matId1 == 0 ? "" : "Data field value");
-            if(matId2!=0)
-            {
+            if (matId2 != 0) {
                 g3df1.setDataFieldValueMat2("different");
             }
             g3df1.setDataFieldValueMat3(matId3 == 0 ? "" : "Data field value");
@@ -267,7 +258,7 @@ public class ComparatorServiceImpl implements ComparatorService {
             list.add(g4df2);
 
         }
-        
+
         return list;
 
     }
