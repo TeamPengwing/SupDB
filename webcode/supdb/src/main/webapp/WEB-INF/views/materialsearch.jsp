@@ -55,7 +55,7 @@
                 <table class="table tblstandard table-striped" id="maintable" style="width:80%">
                     <thead>
                         <tr class="tbl2">
-                            <th style="width:20%">Material ID</th>                            
+                            <th style="width:10%">Material ID</th>                            
                             <th>Material</th>
                         </tr>
                     </thead>
@@ -74,7 +74,7 @@
 <script type="text/javascript">
 
     $(document).ready(function () {
-
+       
         /*
          var mainTable = $('#maintable').DataTable({
          "bServerSide": true,
@@ -112,7 +112,7 @@
                 }
             },
             searching: true,
-            serverSide: true,
+            //serverSide: true,
             columns: [
                 {
                     data: "materialid"
@@ -126,13 +126,12 @@
                         //return('Test');
 
                         return('<img src="https://www.disco.co.jp/eg/products/blade/images/zh05.jpg">' +
-                                '<h3><a href="">' + data["materialname"] + '</a></h3>' +
-                                '<ul>' +
-                                '<li> Description: ' + data["materialdesc"] + '</li>' +
-                                '<li> Supplier: DISCO </li>' +
-                                '<li> Package Application: For Automotive / Non-Automotive / C021 / C027 (LASER groove and non-LASER groove) - Flipchip only </li>' +
-                                '<li> Rating: 3.9 stars (this should be stars!)</li>' +
-                                '</ul>'
+                                '<h2><a href="">' + data["materialname"] + '</a></h2>' 
+                                + 'Description: ' + data["materialdesc"] + '<br />' 
+                                + 'Rating: ' + data["rating"] + '<br />' 
+                                + data["fieldname1"] + ': ' + data["fieldvalue1"] + '<br />' 
+                                + data["fieldname2"] + ': ' + data["fieldvalue2"] + '<br />'                                                                                                      
+                                + data["fieldname3"] + ': ' + data["fieldvalue3"] + '<br />'  
                                 );
                     }
                 }
@@ -140,10 +139,10 @@
 
         });
         $('#inputSearch').keyup(function () {
-            if ($(this).val().length > 2) {
+            //if ($(this).val().length > 2) {
                 //mainTable.search($(this).val()).columns.adjust().draw();
                 mainTable.search($(this).val()).draw();
-            }
+            //}
         });
         //
 

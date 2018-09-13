@@ -2,6 +2,7 @@
 package com.ti.supdb.service;
 
 import com.ti.supdb.domain.SearchResults;
+import com.ti.supdb.domain.SearchResults2;
 import java.util.List;
 
 /**
@@ -18,5 +19,6 @@ public interface SearchService {
      * @return The search results
      */
     List<SearchResults> getSearchResults(String searchTerm);
+    List<SearchResults2> getSearchResults2(String searchTerm);
 
 }
