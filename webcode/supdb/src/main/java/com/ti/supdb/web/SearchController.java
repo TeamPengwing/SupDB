@@ -5,8 +5,7 @@
  */
 package com.ti.supdb.web;
 
-import com.ti.supdb.domain.SearchResults;
-import com.ti.supdb.domain.SearchResults2;
+import com.ti.supdb.domain.SearchResults; 
 import com.ti.supdb.service.SearchService;
 import java.util.HashMap;
 import java.util.List;
@@ -123,8 +122,8 @@ public class SearchController {
         }
         //try {
 
-        List<SearchResults2> ar = searchService.getSearchResults2(searchText);
-        ret.put("data", ar);
+      //  List<SearchResults2> ar = searchService.getSearchResults2(searchText);
+      //  ret.put("data", ar);
         //ret.put("total", ar.size());
         //ret.put("data", searchService.getSearchResults(searchText));
 

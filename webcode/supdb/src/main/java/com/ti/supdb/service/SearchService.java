@@ -1,8 +1,7 @@
 //$Id: LotService.java,v 1.3 2012/11/16 22:09:31 a0199948 Exp $
 package com.ti.supdb.service;
 
-import com.ti.supdb.domain.SearchResults;
-import com.ti.supdb.domain.SearchResults2;
+import com.ti.supdb.domain.SearchResults; 
 import java.util.List;
 
 /**
@@ -18,7 +17,6 @@ public interface SearchService {
      * @param searchTerm The facility identifier.
      * @return The search results
      */
-    List<SearchResults> getSearchResults(String searchTerm);
-    List<SearchResults2> getSearchResults2(String searchTerm);
+    List<SearchResults> getSearchResults(String searchTerm); 
 
 }
