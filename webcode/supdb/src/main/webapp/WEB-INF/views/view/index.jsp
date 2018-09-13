@@ -24,8 +24,8 @@
         <div class="row justify-content-sm-center">
             <div class="col-sm-8">
                 <div class="form-inline">
-                    <input type="input" class="form-control-lg col-sm  text-center" placeholder="What are you looking for today?" />
-                    <input type="submit" class="btn-lg btn-primary col-sm-2" value="Go"/>
+                    <input type="input" id="searchTerm" class="form-control-lg col-sm  text-center" placeholder="What are you looking for today?" />
+                    <input id="searchButton" class="btn-lg btn-primary col-sm-2" type="submit" value="Go">                     
                 </div>
             </div>
         </div>
@@ -62,4 +62,8 @@
     </div>
 </div>
 
-
+<script type="text/javascript">
+    $("#searchButton").click(function () {
+        location.href = "searchmaterial?search=" + $("#searchTerm").val();
+    });
+</script>
