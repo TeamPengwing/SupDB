@@ -66,4 +66,5 @@
     $("#searchButton").click(function () {
         location.href = "searchmaterial?search=" + $("#searchTerm").val();
     });
+    //goes to serch page
 </script>
