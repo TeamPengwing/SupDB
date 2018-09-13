@@ -22,11 +22,11 @@
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Employee
+                            Peripherals
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href='<c:url value="/listemployees?fullname=DP1DM5"/>'>Employee list</a>
-                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href='<c:url value="/view/commodity?comm=Capillary"/>'>Capillary</a>
+                            <a class="dropdown-item" href='<c:url value="/view/commodity?comm=Blade"/>'>Blade</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="#">Something else here</a>
                         </div>

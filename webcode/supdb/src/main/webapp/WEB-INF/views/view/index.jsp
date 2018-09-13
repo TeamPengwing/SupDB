@@ -41,13 +41,13 @@
 
     <div class="row">
         <div class="col-sm text-center">
-            <a href="#">
+            <a href="view/commodity?comm=Blade">
                 <i class="fab fa-cuttlefish fa-3x"></i>
             </a>
             <h3>Blade</h3>
         </div>
         <div class="col-sm text-center">
-            <a href="#">
+            <a href="view/commodity?comm=Capillary">
                 <i class="fas fa-bars fa-3x"></i>
             </a>
             <h3>Capillary</h3>

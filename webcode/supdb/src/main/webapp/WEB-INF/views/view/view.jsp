@@ -59,7 +59,8 @@
             <h5>Current Price: $256.00 per unit</h5>
             <div class="btn-group">
                 <button class="btn btn-primary"><i class="fas fa-boxes"></i> Request for stock</button>
-                <button class="btn btn-info"><i class="fas fa-question-circle"></i> Inquire</button>
+                <button class="btn btn-danger"><i class="fas fa-question-circle"></i> Inquire</button>
+                <button class="btn btn-info" ><i class="fas fa-question-circle"></i> Compare</button>
             </div>
         </div>
         <div class="col col-sm">
