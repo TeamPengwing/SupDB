@@ -24,17 +24,19 @@
         <link rel="stylesheet" href="css/tabulator.min.css">
         <script type="text/javascript" src="js/tabulator.min.js"></script>
 
-        <title>Peripheral</title>
+        <title>Peripherals</title>
     </head>
     <body>
         <br>
         <div>
+            <input type="hidden" id="comm" name="comm" value="<%= request.getParameter("comm") %>">
             <div height="150px"> <div class="btn-group" role="group" aria-label="Basic example">
                     <button type="button" id="download-csv" class="btn btn-secondary">Download</button>
                     <button type="button" class="btn btn-secondary" id="clear" >Clear Filter</button>
                     <button type="button" class="btn btn-secondary">Save Changes</button>
                     <button type="button" id="history-undo" class="btn btn-secondary">Reset Changes</button>
                 </div></div>
+         
             <br>
 
             <div id="example-table"></div>
@@ -146,20 +148,21 @@
                     layout: "fitColumns",
                     history: true,
                     columns: [
+                        {title: "View", field: "view", formatter: "link", align: "center", width: 50, frozen: true},
+                        {title: "Active PN", field: "active", align: "center", editor: "input", headerFilter: "input", width: 120, frozen: true},
                         {//create column group
                             title: "General Information", align: "center",
                             columns: [
-                                {title: "View", field: "view", formatter: "link", align: "center", width: 60},
-                                {title: "Rating", headerFilter: minMaxFilterEditor, headerFilterFunc: minMaxFilterFunction, field: "rating", formatter: "star", align: "center", width: 100},
-                                {title: "Active PN", field: "active", align: "center", editor: "input", headerFilter: "input", width: "100"},
-                                {title: "SITE", field: "site", align: "right", editor: "input", headerFilter: "input", width: "70"},
-                                {title: "Wire Type", field: "wiretype", align: "center", editor: "input", headerFilter: "input", width: "100"},
-                                {title: "Wire Size (mil)", field: "wiresize", align: "center", editor: "input", headerFilter: "input", width: "100"},
+
+                                {title: "Rating", headerFilter: minMaxFilterEditor, headerFilterFunc: minMaxFilterFunction, field: "rating", formatter: "star", align: "center", width: 120},
+                                {title: "SITE", field: "site", align: "right", editor: "input", headerFilter: "input", width: "70", align: "center"},
+                                {title: "Wire Type", field: "wiretype", align: "center", editor: "input", headerFilter: "input", width: "120"},
+                                {title: "Wire Size (mil)", field: "wiresize", align: "center", editor: "input", headerFilter: "input", width: "150"},
                                 {title: "Wire App", field: "wireapp", align: "center", editor: "input", headerFilter: "input", width: "100"},
                                 {title: "Description", field: "description", align: "center", editor: "input", headerFilter: "input", width: "110"},
                                 {title: "SUPPLIER", field: "supplier", align: "center", editor: "input", headerFilter: "input", width: "100"},
-                                {title: "U Price", headerFilter: minMaxFilterEditor, headerFilterFunc: minMaxFilterFunction, field: "price", align: "center", sorter: "number", editor: "input", width: "100"},
-                                {title: "Bond Pad", field: "bondpad", align: "center", editor: "input", headerFilter: "input", width: "90"},
+                                {title: "Unit Price", headerFilter: minMaxFilterEditor, headerFilterFunc: minMaxFilterFunction, field: "price", align: "center", sorter: "number", editor: "input", width: "120"},
+                                {title: "Bond Pad", field: "bondpad", align: "center", editor: "input", headerFilter: "input", width: "100"},
                                 {title: "BPP", field: "bpp", align: "center", editor: "input", headerFilter: "input", width: "70"},
                                 {title: "BPO", field: "bpo", align: "center", editor: "input", headerFilter: "input", width: "70"},
                             ],
@@ -182,19 +185,19 @@
                             title: "Process Details",
                             columns: [
 
-                                {title: "Smallest Ball Size", field: "smallest", headerFilter: "input", width: "100"},
-                                {title: "Bonder Platform", field: "bonder", headerFilter: "input", width: "60"},
-                                {title: "Package/Application/Device", field: "package", align: "center", headerFilter: "input", width: "60"},
-                                {title: "STD L/F (MAX)", field: "stdmax", align: "center", sorter: "number", headerFilter: "input", width: "60"},
-                                {title: "STD L/F (ACTUAL)", field: "stdactual", align: "center", headerFilter: "input", width: "60"},
-                                {title: "ROUGHENED  L/F (MAX)", field: "roughmax", align: "center", headerFilter: "input", width: "60"},
-                                {title: "ROUGHENED  L/F (ACTUAL)", field: "roughactual", align: "center", sorter: "number", headerFilter: "input", width: "60"},
-                                {title: "$/MTD PPF", field: "mtdppf", align: "center", headerFilter: "input", width: "60"},
-                                {title: "$/MTD RLF", field: "mtdrlf", align: "center", headerFilter: "input", width: "60"},
-                                {title: "Clean/Rejuv?", field: "clean", align: "center", headerFilter: "input", width: "60"},
-                                {title: "Rework/Refresh", field: "rework", align: "center", sorter: "string", headerFilter: "input", width: "60"},
-                                {title: "Dual Source?", field: "dual", align: "center", sorter: "string", headerFilter: "input", width: "60"},
-                                {title: "Remarks", field: "remarks", align: "center", sorter: "string", headerFilter: "input", width: "60"},
+                                {title: "Smallest Ball Size", field: "smallest", headerFilter: "input", width: "120"},
+                                {title: "Bonder Platform", field: "bonder", headerFilter: "input", width: "120"},
+                                {title: "Package/Application/Device", field: "package", align: "center", headerFilter: "input", width: "180"},
+                                {title: "STD L/F (MAX)", field: "stdmax", align: "center", sorter: "number", headerFilter: "input", width: "150"},
+                                {title: "STD L/F (ACTUAL)", field: "stdactual", align: "center", headerFilter: "input", width: "150"},
+                                {title: "ROUGHENED  L/F (MAX)", field: "roughmax", align: "center", headerFilter: "input", width: "170"},
+                                {title: "ROUGHENED  L/F (ACTUAL)", field: "roughactual", align: "center", sorter: "number", headerFilter: "input", width: "170"},
+                                {title: "$/MTD PPF", field: "mtdppf", align: "center", headerFilter: "input", width: "120"},
+                                {title: "$/MTD RLF", field: "mtdrlf", align: "center", headerFilter: "input", width: "150"},
+                                {title: "Clean/Rejuv?", field: "clean", align: "center", headerFilter: "input", width: "150"},
+                                {title: "Rework/Refresh", field: "rework", align: "center", sorter: "string", headerFilter: "input", width: "150"},
+                                {title: "Dual Source?", field: "dual", align: "center", sorter: "string", headerFilter: "input", width: "120"},
+                                {title: "Remarks", field: "remarks", align: "center", sorter: "string", headerFilter: "input", width: "150"},
                             ],
                         },
                     ],
@@ -234,10 +237,20 @@
                     {view: "view", rating: 5, site: 'TIPI', wiretype: 'Cu', wiresize: '0.7', wireapp: 'PCC', active: '4719880-0001', description: 'TC-09-XLMBN20DZP39A8', supplier: 'TOTO', price: '7', bondpad: 'Al', bpo: '45', bpp: '50', tdata: '56', cd: '28', ca: '70', ica: '', hdata: '22', fa: '11', or: '8', bna: '10', bnk: '150', smallest: '', bonder: 'SKW', package: 'BGA', stdmax: '700', stdactual: '700', roughmax: '', roughactual: '', mtdppf: '10', mtdrlf: '', clean: 'No', rework: 'No', dual: '', remarks: 'For Depletion '},
                     {view: "view", rating: 5, site: 'CDAT', wiretype: 'Au', wiresize: '0.8', wireapp: 'Au', active: '4705416-0001', description: 'SBN-28080-3881E-ZP36T-Y', supplier: 'SPT  ', price: '6.2', bondpad: 'Al', bpo: '55', bpp: '60', tdata: '80', cd: '38', ca: '120', ica: '50', hdata: '28', fa: '8', or: '12', bna: '10', bnk: '275', smallest: '-', bonder: 'Connx Plus LA', package: 'X2QFN', stdmax: '', stdactual: '', roughmax: '2500', roughactual: '2000', mtdppf: '', mtdrlf: '0.0031', clean: 'No', rework: 'No', dual: 'No', remarks: ''},
                     {view: "view", rating: 5, site: 'TIPI', wiretype: 'Cu', wiresize: '0.7', wireapp: 'PCC', active: '4730616-0001', description: ' SU-22056-283F-RU34TF-250', supplier: 'SPT  ', price: '4.8', bondpad: 'Al', bpo: '45', bpp: '50', tdata: '56', cd: '28', ca: '70', ica: '', hdata: '22', fa: '11', or: '8', bna: '10', bnk: '250', smallest: '', bonder: 'SKW', package: 'BGA', stdmax: '700', stdactual: '700', roughmax: '', roughactual: '', mtdppf: '6.85714285714286', mtdrlf: '', clean: 'No', rework: 'No', dual: '', remarks: ''},
-                    {view: "view", rating: 5, site: 'TITL', wiretype: 'Au', wiresize: '0.8-0.96', wireapp: 'Au', active: '4206160-0001', description: 'SBNE65-30ZQ-AZ-1/16-XL-Y 50MTA', supplier: 'SPT  ', price: '3.75', bondpad: 'All', bpo: 'N/A', bpp: '65', tdata: '80', cd: '38', ca: '65', ica: '', hdata: '30', fa: '11', or: '15', bna: '', bnk: '175', smallest: '', bonder: 'All', package: 'All', stdmax: '1200', stdactual: '1200', roughmax: '1200', roughactual: '1200', mtdppf: '3.125', mtdrlf: '0.003125', clean: 'No', rework: 'No', dual: 'No', remarks: ''},
+                    {view: "view", rating: 4, site: 'TITL', wiretype: 'Au', wiresize: '0.8-0.96', wireapp: 'Au', active: '4206160-0001', description: 'SBNE65-30ZQ-AZ-1/16-XL-Y 50MTA', supplier: 'SPT  ', price: '3.75', bondpad: 'All', bpo: 'N/A', bpp: '65', tdata: '80', cd: '38', ca: '65', ica: '', hdata: '30', fa: '11', or: '15', bna: '', bnk: '175', smallest: '', bonder: 'All', package: 'All', stdmax: '1200', stdactual: '1200', roughmax: '1200', roughactual: '1200', mtdppf: '3.125', mtdrlf: '0.003125', clean: 'No', rework: 'No', dual: 'No', remarks: ''},
                     {view: "view", rating: 5, site: 'TIM', wiretype: 'Au', wiresize: '0.8-0.96', wireapp: 'Au', active: '4671267-0001', description: '414FE-2063-R35', supplier: 'KNS', price: '4.7', bondpad: 'Al ', bpo: '', bpp: '', tdata: '83.82', cd: '35.56', ca: '90', ica: '', hdata: '30.48', fa: '11', or: '12.7', bna: '10', bnk: '203.2', smallest: '', bonder: 'KnS', package: 'QFN', stdmax: '', stdactual: '1500', roughmax: '', roughactual: '', mtdppf: '3.13333333333333', mtdrlf: '', clean: 'No', rework: 'No', dual: 'NO', remarks: 'Planned for depletion 2019'},
                     {view: "view", rating: 5, site: 'TIM', wiretype: 'Au', wiresize: '0.8-0.96', wireapp: 'Au', active: '4671268-0001', description: 'SBNE65-30ZQ-AZ-1/16-XL-Y', supplier: 'SPT', price: '4', bondpad: 'Al ', bpo: '', bpp: '', tdata: '80±3', cd: '38±2/1', ca: '65', ica: '', hdata: '30±1', fa: '11±1', or: '12±3', bna: '10±1', bnk: '200', smallest: '', bonder: 'KnS', package: 'ALL', stdmax: '', stdactual: '2000', roughmax: '', roughactual: '500', mtdppf: '2', mtdrlf: '0.008', clean: 'No', rework: 'No', dual: 'NO', remarks: 'Roadmap'},
-                    {view: "view", rating: 5, site: 'TICL', wiretype: 'Au', wiresize: '1.3', wireapp: 'Au', active: '4705418-0001', description: 'SBN-41110-5381E-ZP36T-Y', supplier: 'SPT  ', price: '4.95', bondpad: 'BOAC/Al/DCu', bpo: '71', bpp: '85', tdata: '110 ±3', cd: '53 ±2', ca: '120° ±5°', ica: '50° ±5°', hdata: '41 +2/-1', fa: '8° ±1°', or: '20 ±5', bna: '10° ±1°', bnk: '275 ±25', smallest: '58-78um', bonder: 'ASM &KNS', package: 'STANDARD QFN', stdmax: '2500', stdactual: '2500', roughmax: '1500', roughactual: '1500', mtdppf: '1.98', mtdrlf: '0.0033', clean: 'No', rework: 'No', dual: 'No', remarks: ''}
+                    {view: "view", rating: 5, site: 'TICL', wiretype: 'Au', wiresize: '1.3', wireapp: 'Au', active: '4705418-0001', description: 'SBN-41110-5381E-ZP36T-Y', supplier: 'SPT  ', price: '4.95', bondpad: 'BOAC/Al/DCu', bpo: '71', bpp: '85', tdata: '110 ±3', cd: '53 ±2', ca: '120° ±5°', ica: '50° ±5°', hdata: '41 +2/-1', fa: '8° ±1°', or: '20 ±5', bna: '10° ±1°', bnk: '275 ±25', smallest: '58-78um', bonder: 'ASM &KNS', package: 'STANDARD QFN', stdmax: '2500', stdactual: '2500', roughmax: '1500', roughactual: '1500', mtdppf: '1.98', mtdrlf: '0.0033', clean: 'No', rework: 'No', dual: 'No', remarks: ''},
+                    {view: "view", rating: 3, site: 'TICL', wiretype: 'Au', wiresize: '2', wireapp: 'Au', active: '4705419-0001', description: 'SBB-64180-8681F-ZP34-Y', supplier: 'SPT  ', price: '6', bondpad: 'Al/BOAC/NiAu', bpo: '111', bpp: '130', tdata: '180 ±8', cd: '86 ±5', ca: '120° ±5°', ica: '50° ±5°', hdata: '64 ±3', fa: '11° ±1°', or: '38 ±8', bna: 'NA', bnk: 'NA', smallest: '95-125um', bonder: 'ASM', package: 'STANDARD QFN & CLIP', stdmax: '2000', stdactual: '2000', roughmax: '', roughactual: '', mtdppf: '3', mtdrlf: '', clean: 'No', rework: 'No', dual: 'No', remarks: 'Used for Clip Only'},
+                    {view: "view", rating: 5, site: 'TIEM', wiretype: 'Au', wiresize: '0.9', wireapp: 'Au', active: '8076322-0001', description: '413FE-2024-R33.', supplier: 'KNS', price: '7.2', bondpad: 'Al', bpo: '66', bpp: '75', tdata: '84', cd: '41', ca: '90', ica: '', hdata: '31', fa: '11', or: '13', bna: '20', bnk: '', smallest: '', bonder: 'Maxum / Plus', package: 'CSP', stdmax: '1500', stdactual: '1500', roughmax: '', roughactual: '', mtdppf: '4.8', mtdrlf: '', clean: 'Yes', rework: 'No', dual: 'No', remarks: ''},
+                    {view: "view", rating: 5, site: 'TICL', wiretype: 'Cu', wiresize: '1.15', wireapp: 'Cu', active: '4684444-0001', description: 'SU-41110-5381E-ZU38TS-Y', supplier: 'SPT  ', price: '5.39', bondpad: 'BOAC', bpo: '71', bpp: '85', tdata: '110 ±5', cd: '53 ±2', ca: '120° ±5°', ica: '50° ±5°', hdata: '41 +2/-1', fa: '8° ±1°', or: '20 ±5', bna: '10° ±2°', bnk: '275 ±25', smallest: '58-78um', bonder: 'ASM &KNS', package: 'STANDARD QFN', stdmax: '1000', stdactual: '1000', roughmax: '', roughactual: '', mtdppf: '5.39', mtdrlf: '', clean: 'No', rework: 'Yes', dual: '', remarks: 'Planned to deplete 1 device only with on/off demand'},
+                    {view: "view", rating: 5, site: 'TICL', wiretype: 'Cu', wiresize: '0.8', wireapp: 'Cu, Pd coated Cu', active: '4698709-0001', description: 'SU-24080-3881E-ZU36TS-Y', supplier: 'SPT  ', price: '6.98', bondpad: 'BOAC/Al/DCu', bpo: '55', bpp: '62', tdata: '80 ±3', cd: '38 +2/-1', ca: '120° ±5°', ica: 'NA', hdata: '24 ±1', fa: '8° ±1°', or: '12 ±3', bna: '10° ±1°', bnk: '200 ±25', smallest: '36-52um', bonder: 'ASM &KNS', package: 'STANDARD QFN', stdmax: '1500', stdactual: '1500', roughmax: '1000', roughactual: '1000', mtdppf: '4.65333333333333', mtdrlf: '0.00698', clean: 'No', rework: 'Yes', dual: 'No', remarks: ''},
+                    {view: "view", rating: 2, site: 'TICL', wiretype: 'Cu', wiresize: '0.8', wireapp: 'Cu on small BPO/BPP', active: '4706805-0001', description: 'SQ-25066-303F-RU39TS-Y', supplier: 'SPT  ', price: '8.2', bondpad: 'Al', bpo: '45', bpp: '55', tdata: '66 ±3', cd: '30 +2/-0', ca: '70° ±5°', ica: 'NA', hdata: '25 ±1', fa: '11° ±1°', or: '8 ±3', bna: '10° ±1°', bnk: '150 +25/-0', smallest: '34-39um', bonder: 'KNS', package: 'Fine Pitched MRQFN', stdmax: '', stdactual: '', roughmax: '1000', roughactual: '1000', mtdppf: '', mtdrlf: '0.0082', clean: 'No', rework: 'Yes', dual: 'No', remarks: ''},
+                    {view: "view", rating: 5, site: 'TICL', wiretype: 'Cu', wiresize: '0.96', wireapp: 'Cu,Pd coated Cu', active: '4703876-0001', description: 'SU-30110-4651F-RU36TS-Y', supplier: 'SPT  ', price: '6.41', bondpad: 'BOAC/Al/DCu', bpo: '65', bpp: '75', tdata: '110 ±5', cd: '46 ±2', ca: '90° ±5°', ica: '50° ±5°', hdata: '30 +2/-1', fa: '11° ±1°', or: '20 ±5', bna: '10° ±2°', bnk: '275 ±25', smallest: '51-71um', bonder: 'ASM &KNS', package: 'STANDARD QFN & CLIP', stdmax: '2500', stdactual: '2500', roughmax: '2000', roughactual: '2000', mtdppf: '2.564', mtdrlf: '0.003205', clean: 'No', rework: 'Yes', dual: 'PECO B09.512-43-18-08 (TI P/N 4711219-0001) Bare Cu wire only (excluding PCC wire)', remarks: '500 K TD for Clip BSOB'},
+                    {view: "view", rating: 5, site: 'TICL', wiretype: 'Cu', wiresize: '1.3', wireapp: 'Cu', active: '4703877-0001', description: 'SU-41110-5351F-RU36TS-Y', supplier: 'SPT  ', price: '6.92', bondpad: 'BOAC/Al/DCu', bpo: '71', bpp: '85', tdata: '110 ±5', cd: '53 ±2', ca: '120° ±5°', ica: 'NA', hdata: '41 +2/-1', fa: '8° ±1°', or: '20 ±5', bna: '10° ±2°', bnk: '275 ±25', smallest: '58-78um', bonder: 'ASM &KNS', package: 'STANDARD QFN', stdmax: '2500', stdactual: '2500', roughmax: '2000', roughactual: '2000', mtdppf: '2.768', mtdrlf: '0.00346', clean: 'No', rework: 'Yes', dual: 'No', remarks: ''},
+                    {view: "view", rating: 4, site: 'TICL', wiretype: 'Cu', wiresize: '2', wireapp: 'Cu', active: '4706712-0001', description: 'SU-64180-8681F-RU34-Y', supplier: 'SPT  ', price: '6.58', bondpad: 'BOAC/DCu', bpo: '111', bpp: '130', tdata: '180 ±8', cd: '86 ±5', ca: '120° ±5°', ica: '50° ±5°', hdata: '64 ±3', fa: '11° ±1°', or: '38 ±8', bna: 'NA', bnk: 'NA', smallest: '95-125um', bonder: 'ASM &KNS', package: 'STANDARD QFN', stdmax: '1500', stdactual: '1500', roughmax: '1000', roughactual: '1000', mtdppf: '4.38666666666667', mtdrlf: '0.00658', clean: 'No', rework: 'Yes', dual: 'No', remarks: ''},
+                    {view: "view", rating: 5, site: 'TICL', wiretype: 'Cu', wiresize: '0.8', wireapp: 'Cu', active: '4704082-0001', description: 'SU-25075-3681E08-RU34TP-Y', supplier: 'SPT  ', price: '6.51', bondpad: 'Al', bpo: '55', bpp: '62', tdata: '75 ±3', cd: '36 +2/-0', ca: '120° ±5°', ica: '50° ±5°', hdata: '25 ±1', fa: '8° ±1°', or: '8 ±3', bna: '10° ±1°', bnk: '180 +25/-0', smallest: '36-52um', bonder: 'ASM', package: 'STANDARD QFN', stdmax: '', stdactual: '', roughmax: '1500', roughactual: '1500', mtdppf: '', mtdrlf: '0.00434', clean: 'No', rework: 'No', dual: 'No', remarks: 'Ongoing study @ TD 2500'},
+                    {view: "view", rating: 3, site: 'TICL', wiretype: 'Cu', wiresize: '1.3', wireapp: 'Cu', active: '4689932-0001', description: 'SU-41110-5381E-ZU36TS-Y', supplier: 'SPT  ', price: '5.5', bondpad: '', bpo: '', bpp: '', tdata: '', cd: '', ca: '', ica: '', hdata: '', fa: '', or: '', bna: '', bnk: '', smallest: '', bonder: '', package: '', stdmax: '1500', stdactual: '1500', roughmax: '1000', roughactual: '1000', mtdppf: '3.66666666666667', mtdrlf: '0.0055', clean: '', rework: '', dual: '', remarks: 'Depleted already replaced by RU capillary'}
                 ];
                 $("#example-table").tabulator("setData", sampleData);
 
@@ -270,7 +283,7 @@
                                 {title: "Silicon Node Application", field: "silicon", editor: "input", headerFilter: "input", width: "60"},
                                 {title: "Minimum scribe width", field: "width", headerFilter: "input", width: "60"},
                                 {title: "Maximum wafer thickness", field: "thickness", headerFilter: "input", width: "60"},
-                                {title: "Dresser board application", field: "dresser", headerFilter: "input", width: "60"},                            
+                                {title: "Dresser board application", field: "dresser", headerFilter: "input", width: "60"},
                             ],
                         },
                         {//create column group
