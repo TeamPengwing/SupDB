@@ -9,72 +9,108 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ page session="false" %>
 
-<div class="container"  >
 
-    <div class="py-5 text-center">
-        <h5>Prebond Applications</h5>
+<div class="container-fluid"   style="padding-left: 50px; padding-right: 50px;">
+
+    <div class=" text-center col-md-12"   >
+        <h5>Pre bond Applications</h5>
         <h1>Cut Height Calculator</h1>
     </div>
+    <div class="row" >
+        <div  class="my-3 p-3 bg-white rounded shadow-sm col-sm-2" >   
+            <form id="data1" class="needs-validation" novalidate>
+                <div> 
+                    <h4>Enter die and dicing tape information</h4>
+                </div> 
+                <div class="form-group"  >
 
-    <div  class="my-3 p-3 bg-white rounded shadow-sm" >   
-        <form id="data1" class="needs-validation" novalidate>
-            <div> 
-                <h4>Enter die and dicing tape information</h4>
-            </div> 
-            <div class="form-group"  >
+                    <label id="die_thick">Die thickness (um)</label>
 
-                <label id="die_thick">Die thickness (um)</label>
+                    <input  type="number" id="die_thick1"  name = "waf" placeholder="Input wafer or die thickness in um"  value = "">  
+                </div>
+                <div class="form-group ">
+                    <label id="tapex">Tape thickness (um)</label>
 
-                <input  type="number" id="die_thick1"  name = "waf" placeholder="Input wafer or die thickness in um"  value = "">  
+                    <input type="number" id="tapex1" name = "diex" placeholder="Input tape thickness in um"  value = "">  
+                </div> 
+                <div class="form-group  ">
+                    <label id="cutdt">Cut thru dicing tape (um)</label>
+                    <input type="number" id="cutdt1" name = "diex" placeholder="Input cut thru dicing tape in um (25um default)" value = ""> 
+
+                </div>
+                <div class="form-group ">
+                    <label id="zone">Z1 Cut Height %</label> 
+                    <input  id="zone1" type="number" placeholder="Input desired Z1 Cut Height %"   value = "">
+
+                </div> 
+
+
+            </form>
+            <button id="compute" class="btn btn-primary" onclick="myFunction()">Compute</button>
+            <button class="btn btn-secondary" onclick="Clear()">Clear</button>
+
+        </div>  
+
+        <div class="my-3 p-3 bg-white rounded shadow-sm col-sm-2">
+            <div>
+                <h4>RESULTS</h4> 
             </div>
-            <div class="form-group ">
-                <label id="tapex">Tape thickness (um)</label>
+            <form id="output1">
+                <div class="form-group">
+                    <label id="zout">Z1 Cut Height (um / mil) </label>
+                    <label  id="zout1" type="number" ></label>
+                    <label >/</label>
+                    <label id="mil1" type="number"  ></label>
+                </div>
+                <div class="form-group">
+                    <label  id="zout2">Z2 Cut Height (um / mil)</label>
+                    <label id="zout21" type="number"></label>
+                    <label >/</label>
+                    <label id="mil2" type="number" ></label>
+                </div>
 
-                <input type="number" id="tapex1" name = "diex" placeholder="Input tape thickness in um"  value = "">  
-            </div> 
-            <div class="form-group  ">
-                <label id="cutdt">Cut thru dicing tape (um)</label>
-                <input type="number" id="cutdt1" name = "diex" placeholder="Input cut thru dicing tape in um (25um default)" value = ""> 
 
+
+
+            </form>
+        </div>	
+
+        <div class="my-3 p-3 bg-white rounded shadow-sm col-sm-8">
+            <div>
+                <h4>Related Peripheral</h4> 
             </div>
-            <div class="form-group ">
-                <label id="zone">Z1 Cut Height %</label> 
-                <input  id="zone1" type="number" placeholder="Input desired Z1 Cut Height %"   value = "">
-
-            </div> 
-
-
-        </form>
-        <button id="compute" class="btn btn-primary" onclick="myFunction()">Compute</button>
-        <button class="btn btn-secondary" onclick="Clear()">Clear</button>
-
-    </div>  
-
-    <div class="my-3 p-3 bg-white rounded shadow-sm">
-        <h4>RESULTS</h4>
-    </div> 
-    <div class="my-3 p-3 bg-white rounded shadow-sm">
-        <form id="output1">
-            <div class="form-group">
-                <label id="zout">Z1 Cut Height (um / mil) </label>
-                <label  id="zout1" type="number" ></label>
-                <label >/</label>
-                <label id="mil1" type="number"  ></label>
-            </div>
-            <div class="form-group">
-                <label  id="zout2">Z2 Cut Height (um / mil)</label>
-                <label id="zout21" type="number"></label>
-                <label >/</label>
-                <label id="mil2" type="number" ></label>
-            </div>
-
-
-
-
-        </form>
-    </div>	
-
-
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">First</th>
+                        <th scope="col">Last</th>
+                        <th scope="col">Handle</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 
 
     <script type="text/javascript">

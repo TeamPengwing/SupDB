@@ -25,4 +25,9 @@ public class CalculatorController {
     public String cutheight(final Model model) {
         return "calculator/cutheight";
     }
+    
+     @RequestMapping("/usablebladeexpocalc")
+    public String usablebladeexposure(final Model model) {
+        return "calculator/usablebladeexposure";
+    }
 }
