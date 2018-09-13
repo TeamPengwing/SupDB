@@ -16,11 +16,15 @@
 
   <!-- All other views get the header, menu and footer tiles. -->
   <!-- Definitions are given for two levels of depth.         -->
+  
   <definition name="*" extends="commonPage">
     <put-attribute name="body" value="/WEB-INF/views/{1}.jsp" />
   </definition>
   <definition name="*/*" extends="commonPage">
     <put-attribute name="body" value="/WEB-INF/views/{1}/{2}.jsp" />
   </definition>
+
+  
+  
 
 </tiles-definitions>
